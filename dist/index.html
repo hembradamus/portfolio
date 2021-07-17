@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -23,84 +24,85 @@
   </head>
   <body>
     <main id="profile"> <!-- Recreated from UXfolio in case I need it-->
-      <!-- Bio section at the top of the page -->
-      <section class="bio container">
-        <div class="row top">
-          <div class="image col-sm-12 col-md-4">
-            <img src="img/uxf/homeprofile.jpeg" alt="Randy!">
-          </div>
-          <div class="mini-cv col-sm-12 col-md-8 align-middle">
-            <div class="details">
-              <h1>Randy Hembrador</h1>
-              <h2>UX designer</h2>
-              <p></p>
-              <p>Hi, I'm Randy! I'm a UX designer that loves pixels, problem-solving, and pain-reduction. Let's make it happen!</p>
+      <div class="page">
+        <div class="content-container px-4"><!-- Bio section at the top of the page -->
+          <section class="bio container">
+            <div class="row align-items-end">
+              <div class="image col-sm-12 col-md-4">
+                <img src="img/uxf/homeprofile.jpeg" alt="Randy!" class="img-fluid">
+              </div>
+              <div class="mini-cv col-sm-12 col-md-8">
+                <div class="details">
+                  <h1>Randy Hembrador</h1>
+                  <h2>UX designer</h2>
+                  <p></p>
+                  <p>Hi, I'm Randy! I'm a UX designer that loves pixels, problem-solving, and pain-reduction. Let's make it happen!</p>
+                </div>
+                <nav class="profile-links">
+                  <ul class="nav nav-pills">
+    
+                    <ul class="nav nav-pills social">
+                      <li class="nav-item linked-in">
+                        <a class="nav-link" aria-current="page" href="https://www.linkedin.com/in/randy-hembrador/" target="blank"><i class="fa fa-linkedin"></i></a>
+                      </li>
+                    </ul> <!-- End of social Links -->
+    
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item contact">
+                      <a class="nav-link" aria-current="page" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item resume">
+                      <a class="nav-link" href="https://docs.google.com/document/d/1pg6W8tJKPysazoXx-lnkLAAPa7_JzLbt2QPezlbXn4c/edit#" target="blank">Resume</a>
+                    </li>
+                    
+                  </ul>
+                </nav>
+              </div>
             </div>
-            <nav class="profile-links">
-              <ul class="nav nav-pills">
-
-                <ul class="nav nav-pills social">
-                  <li class="nav-item linked-in">
-                    <a class="nav-link" aria-current="page" href="https://www.linkedin.com/in/randy-hembrador/" target="blank"><i class="fa fa-linkedin"></i></a>
-                  </li>
-                </ul> <!-- End of social Links -->
-
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="about.html">About</a>
-                </li>
-                <li class="nav-item contact">
-                  <a class="nav-link" href="#">Contact</a>
-                </li>
-                <li class="nav-item resume">
-                  <a class="nav-link" href="https://docs.google.com/document/d/1pg6W8tJKPysazoXx-lnkLAAPa7_JzLbt2QPezlbXn4c/edit#" target="blank">Resume</a>
-                </li>
-                
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects section -->
-      <section class="projects container">    
-        <!-- Row 1 -->
-        <div class="row gx-3">
-          <div class="project-container col-sm-12 col-md-6">
-            <a href="#" class="project">
-              <div class="project-name">
-                <div class="project-title">Footprint Collective</div>
-                <div class="project-subtitle">Group project for class</div>
+          </section>
+    
+          <!-- Projects section -->
+          <section class="projects container text-center">    
+            <!-- Row 1 -->
+            <div class="row gx-3">
+              <div class="project-container col-sm-12 col-md-6">
+                <a href="#" class="project d-flex flex-column-reverse">
+                  <div class="project-name">
+                    <div class="project-title">Footprint Collective</div>
+                    <div class="project-subtitle">Group project for class</div>
+                  </div>
+                  <div class="image-container ratio ratio-1x1">
+                    <img src="./img/uxf/home-fc-thumb.png" alt="" class="img-fluid">
+                  </div>
+                </a>
               </div>
-              <div class="image-container">
-                <img src="./img/uxf/home-fc-thumb.png" alt="">
+              
+              <div class="project-container col-sm-12 col-md-6">
+                <a href="#" class="project d-flex flex-column-reverse">
+                  <div class="project-name">
+                    <div class="project-title">Footprint Collective</div>
+                    <div class="project-subtitle">Group project for class</div>
+                  </div>
+                  <div class="image-container ratio ratio-1x1">
+                    <img src="./img/uxf/home-fc-thumb.png" alt="" class="img-fluid">
+                  </div>
+                </a>
               </div>
-            </a>
-          </div>
+            </div>    
+    
+            <!-- Row 2 -->        
+          </section>
           
-          <div class="project-container col-sm-12 col-md-6">
-            <a href="#" class="project">
-              <div class="project-name">
-                <div class="project-title">Footprint Collective</div>
-                <div class="project-subtitle">Group project for class</div>
-              </div>
-              <div class="image-container">
-                <img src="./img/uxf/home-fc-thumb.png" alt="">
-              </div>
-            </a>
-          </div>
-        </div>    
-
-        <!-- Row 2 -->
+        </div>
+      </div>
         
-      </section>
-  
       <!-- Footer -->
-      <footer>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="content col-12">
-              <a href="https://www.linkedin.com/in/randy-hembrador/" target="blank">LinkedIn</a>
-            </div>
+      <footer class="container-fluid border-top text-center">
+        <div class="row">
+          <div class="content col-12">
+            <a href="https://www.linkedin.com/in/randy-hembrador/" target="blank">LinkedIn</a>
           </div>
         </div>
       </footer>
