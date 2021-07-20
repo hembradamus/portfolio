@@ -1,3 +1,19 @@
+/* -------------------- Scrollbar Styles -------------------- */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c2c2c2;
+  border-radius: 6px;
+  border: 3px solid #fafafa;
+}
+
+::-webkit-scrollbar-track {
+  background: #fafafa;
+}
+
+/* -------------------- Bootstrap Adjustments-------------------- */
 .ratio > img {
   height: initial;
   -o-object-fit: cover;
@@ -5,14 +21,90 @@
   aspect-ratio: 1 /1;
 }
 
-/* -------------------- CUSTOM STYLES -------------------- */
-.media-col iframe {
+.row {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row > * {
+  padding: 0;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+/* -------------------- Multipage Styles (Static) -------------------- */
+.s_mw_1100 {
+  max-width: 1100px;
+}
+
+.s_mw_900 {
+  max-width: 900px;
+}
+
+.s_mb_100 {
+  margin-bottom: 100px;
+}
+
+.s_pb_100 {
+  padding-bottom: 100px;
+}
+
+.s_py_100 {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+/* -------------------- Multipage Styles (Responsive) -------------------- */
+.r_px50py24 {
+  padding: 50px 24px;
+}
+
+.r_px40py24 {
+  padding: 40px 24px;
+}
+
+.r_px_24 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* -------------------- Specific Types -------------------- */
+main > div.project .project_header {
+  background-size: cover;
+  background-position: 50%;
+}
+
+main > div.project .project_header .homelink {
+  padding-top: 15px;
+}
+
+main > div.project .project_header .title {
+  margin: 60px auto 60px;
+}
+
+main > div.project .project_header .title h1 {
+  margin-bottom: 30px;
+}
+
+main > div.project .quote {
+  background-color: #edf1f1;
+  padding: 40px 24px;
+}
+
+main > div.project .quote .text-container div:first-child {
+  margin-bottom: 25px;
+}
+
+main > div.project .media-col iframe {
   width: 100%;
   height: auto;
   aspect-ratio: 3 /2;
 }
 
-.gallery-item .screen {
+main > div.project .gallery-item .screen {
   border-radius: 11%;
   overflow: hidden;
   padding: 3.3%;
@@ -21,12 +113,12 @@
           transform: translateX(-50%);
 }
 
-.gallery-item .screen .scrolling-content {
+main > div.project .gallery-item .screen .scrolling-content {
   border-radius: 6%;
   overflow-y: scroll;
 }
 
-.gallery-item:before {
+main > div.project .gallery-item:before {
   content: "";
   width: 98%;
   height: 97%;
@@ -40,13 +132,13 @@
   border-radius: 31px;
 }
 
-.project-footer-icons {
+main > div.project .project-footer-icons {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
-.project-footer-icons a {
+main > div.project .project-footer-icons a {
   width: 28px;
   height: 28px;
   -webkit-box-align: center;
@@ -59,29 +151,75 @@
   margin: 0 5px;
 }
 
-.project-footer-icons svg {
+main > div.project .project-footer-icons svg {
   width: 14px;
   height: 14px;
   display: block;
 }
 
-.project-footer-icons a.facebook {
+main > div.project .project-footer-icons a.facebook {
   background-color: #0d6efd;
   border-color: #0d6efd;
   margin-left: 24px;
 }
 
-.project-footer-icons .twitter {
+main > div.project .project-footer-icons .twitter {
   background-color: #55acee;
   border-color: #55acee;
 }
 
-.project-footer-icons .linkedin {
+main > div.project .project-footer-icons .linkedin {
   background-color: #0976b4;
   border-color: #0976b4;
 }
 
+/* -------------------- Specific Pages  -------------------- */
 #project_footprint_collective .project_header {
   background-image: url(../img/uxf/home-fc-thumb.png);
+}
+
+#project_footprint_collective .background {
+  padding-bottom: 40px;
+}
+
+#project_footprint_collective .footprint {
+  padding-bottom: 30px;
+}
+
+#project_footprint_collective .breakdown {
+  padding-top: 30px;
+}
+
+@media (min-size: 576px) {
+  .r_px40py24 {
+    padding: 80px;
+  }
+}
+
+@media (min-size: 768px) {
+  .r_px50py24 {
+    padding: 50px 30px;
+  }
+  .r_px40py24 {
+    padding: 100px;
+  }
+  .quote {
+    padding: 60px 30px;
+  }
+}
+
+@media (min-size: 960px) {
+  .r_px50py24 {
+    padding: 75px;
+  }
+  .quote {
+    padding: 60px;
+  }
+}
+
+@media (min-size: 1200px) {
+  .r_px50py24 {
+    padding: 100px;
+  }
 }
 /*# sourceMappingURL=global.css.map */
