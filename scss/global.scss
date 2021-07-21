@@ -425,6 +425,15 @@ main > div.project {
 }
 
 @media (min-width: $size-md){
+    .col-md-6.col-lg-4 {
+        &:nth-of-type(1) > div, &:nth-of-type(3) > div{
+            margin: 0 28px 28px 0;
+        }
+        &:nth-of-type(2) > div{
+            margin: 0 0 028px;
+        }
+    }
+
     .r_pt_md_72px {
         padding-top: 72px;
     }
@@ -496,6 +505,18 @@ main > div.project {
 }
 
 @media (min-width: $size-lg){
+    .col-md-6.col-lg-4 {
+        &:nth-of-type(1) > div{
+            margin: 0 28px 0 0;
+        }
+        &:nth-of-type(2) > div{
+            margin: 0 28px 0;
+        }
+        &:nth-of-type(3) > div{
+            margin: 0 0 0 28px;
+        }
+    }
+
     .r_mw_lg_720 {
         max-width: 720px;
     }
