@@ -36,8 +36,12 @@
 }
 
 /* -------------------- Multipage Styles (Static) -------------------- */
-.s_mw_1100 {
-  max-width: 1100px;
+.s_mw_1240 {
+  max-width: 1240px;
+}
+
+.s_mw_1110 {
+  max-width: 1110px;
 }
 
 .s_mw_900 {
@@ -48,6 +52,14 @@
   margin-bottom: 100px;
 }
 
+.s_mb_50 {
+  margin-bottom: 50px;
+}
+
+.s_mb_24 {
+  margin-bottom: 24px;
+}
+
 .s_pb_100 {
   padding-bottom: 100px;
 }
@@ -55,6 +67,20 @@
 .s_py_100 {
   padding-bottom: 100px;
   padding-top: 100px;
+}
+
+.s_py_40 {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.s_py_30 {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.s_pt_52 {
+  padding-top: 52px;
 }
 
 /* -------------------- Multipage Styles (Responsive) -------------------- */
@@ -72,6 +98,10 @@
 }
 
 /* -------------------- Specific Types -------------------- */
+.page-footer {
+  height: 100px;
+}
+
 main > div.project .project_header {
   background-size: cover;
   background-position: 50%;
@@ -104,7 +134,11 @@ main > div.project .media-col iframe {
   aspect-ratio: 3 /2;
 }
 
-main > div.project .gallery-item .screen {
+main > div.project .gallery {
+  background-color: #E5EFF3;
+}
+
+main > div.project .gallery .gallery-item .screen {
   border-radius: 11%;
   overflow: hidden;
   padding: 3.3%;
@@ -113,12 +147,12 @@ main > div.project .gallery-item .screen {
           transform: translateX(-50%);
 }
 
-main > div.project .gallery-item .screen .scrolling-content {
+main > div.project .gallery .gallery-item .screen .scrolling-content {
   border-radius: 6%;
   overflow-y: scroll;
 }
 
-main > div.project .gallery-item:before {
+main > div.project .gallery .gallery-item:before {
   content: "";
   width: 98%;
   height: 97%;
@@ -132,13 +166,17 @@ main > div.project .gallery-item:before {
   border-radius: 31px;
 }
 
-main > div.project .project-footer-icons {
+.project-footer {
+  background-color: #f3f7f8;
+}
+
+.project-footer-icons {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
-main > div.project .project-footer-icons a {
+.project-footer-icons a {
   width: 28px;
   height: 28px;
   -webkit-box-align: center;
@@ -151,29 +189,165 @@ main > div.project .project-footer-icons a {
   margin: 0 5px;
 }
 
-main > div.project .project-footer-icons svg {
+.project-footer-icons svg {
   width: 14px;
   height: 14px;
   display: block;
 }
 
-main > div.project .project-footer-icons a.facebook {
+.project-footer-icons a.facebook {
   background-color: #0d6efd;
   border-color: #0d6efd;
   margin-left: 24px;
 }
 
-main > div.project .project-footer-icons .twitter {
+.project-footer-icons .twitter {
   background-color: #55acee;
   border-color: #55acee;
 }
 
-main > div.project .project-footer-icons .linkedin {
+.project-footer-icons .linkedin {
   background-color: #0976b4;
   border-color: #0976b4;
 }
 
 /* -------------------- Specific Pages  -------------------- */
+#profile .bio .image {
+  aspect-ratio: 1 / 1;
+  padding: 0 15px;
+}
+
+#profile .bio .image img {
+  aspect-ratio: 1 / 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 0;
+     object-position: 50% 0;
+  width: 100%;
+}
+
+#profile .bio .mini-cv {
+  padding: 0 15px;
+}
+
+#profile .bio .mini-cv p:empty:before {
+  content: "\00A0";
+}
+
+#profile nav.profile-links li {
+  margin: 0 20px 20px 0;
+}
+
+#profile nav.profile-links li .nav-link {
+  background-color: white;
+  border: 1px solid rgba(66, 66, 66, 0.2);
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*
+            color: $gray;
+            font-feature-settings: "liga","kern";
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .5px;
+            line-height: 21px;
+            */
+  padding: 6px 18px;
+  text-transform: uppercase;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-transition-property: color, background-color, fill;
+  transition-property: color, background-color, fill;
+  /*&:hover{
+                background-color: rgba(66,66,66,.2);
+                border-color: white;
+                color: white;
+            }*/
+}
+
+#profile nav.profile-links .social {
+  margin-right: 20px;
+}
+
+#profile nav.profile-links .social a {
+  padding: 0;
+  height: 100%;
+  width: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 0;
+}
+
+#profile nav.profile-links .social a svg {
+  fill: #424242;
+}
+
+#profile nav.profile-links .social a:hover svg {
+  fill: white;
+}
+
+#profile .projects a {
+  text-decoration: none;
+}
+
+#profile .projects .project {
+  margin-bottom: 20px;
+  position: relative;
+  -webkit-transition: linear .2s;
+  transition: linear .2s;
+}
+
+#profile .projects .project .project-name {
+  padding: 20px;
+  -webkit-transition: opacity .2s ease-out;
+  transition: opacity .2s ease-out;
+  z-index: 2;
+}
+
+#profile .projects .project .project-name .project-title {
+  /*color: $l-gray;
+                    font-family: $h-font;
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 25px;*/
+  margin-bottom: 7px;
+  text-decoration: none;
+}
+
+#profile .projects .project .project-name .project-subtitle {
+  color: #424242;
+  font-size: 16px;
+  line-height: 19px;
+  opacity: .8;
+}
+
+#profile .projects .project .image-container {
+  content-visibility: auto;
+}
+
+#profile .projects .project .image-container img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  aspect-ratio: 1 / 1;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+#profile .projects .project:hover .image-container img {
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
+}
+
 #project_footprint_collective .project_header {
   background-image: url(../img/uxf/home-fc-thumb.png);
 }
@@ -190,34 +364,78 @@ main > div.project .project-footer-icons .linkedin {
   padding-top: 30px;
 }
 
-@media (min-size: 576px) {
+@media (min-width: 576px) {
   .r_px40py24 {
     padding: 80px;
   }
 }
 
-@media (min-size: 768px) {
+@media (min-width: 768px) {
+  .r_pt_md_72px {
+    padding-top: 72px;
+  }
+  .r_pt_md_78px {
+    padding-top: 78px;
+  }
   .r_px50py24 {
     padding: 50px 30px;
   }
   .r_px40py24 {
     padding: 100px;
   }
-  .quote {
+  main > div.project .quote {
     padding: 60px 30px;
+  }
+  #profile .bio .image {
+    aspect-ratio: initial;
+    content-visibility: auto;
+    height: 460px;
+    padding: 0 25px 0 15px;
+  }
+  #profile .bio .image img {
+    aspect-ratio: initial;
+  }
+  #profile .bio .mini-cv {
+    padding: 0 15px 0 25px;
+  }
+  #profile .projects {
+    padding-top: 0;
+  }
+  #profile .projects .row {
+    gap: 24px;
+  }
+  #profile .projects .row .project-container {
+    width: calc(50% - 12px);
+  }
+  #profile .projects .row .project .project-name {
+    color: #fff;
+    position: absolute;
+  }
+  #profile .projects .row .project .project-name .project-title {
+    color: white;
+    margin-bottom: 16px;
+  }
+  #profile .projects .row .project .project-name .project-subtitle {
+    color: white;
+  }
+  #about .personal.r_px40py24 {
+    padding: 100px 0;
   }
 }
 
-@media (min-size: 960px) {
+@media (min-width: 960px) {
   .r_px50py24 {
     padding: 75px;
   }
-  .quote {
+  .s_mw_lg_720 {
+    max-width: 720px;
+  }
+  main > div.project .quote {
     padding: 60px;
   }
 }
 
-@media (min-size: 1200px) {
+@media (min-width: 1200px) {
   .r_px50py24 {
     padding: 100px;
   }
