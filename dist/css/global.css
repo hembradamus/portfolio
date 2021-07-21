@@ -1,3 +1,5 @@
+/* -------------------- Variable  -------------------- */
+/* -------------------- Mixins  -------------------- */
 /* -------------------- Scrollbar Styles -------------------- */
 ::-webkit-scrollbar {
   width: 12px;
@@ -35,7 +37,7 @@
   padding: 0;
 }
 
-/* -------------------- Multipage Styles (Static) -------------------- */
+/* -------------------- Static Multipage Styles -------------------- */
 .s_mw_1240 {
   max-width: 1240px;
 }
@@ -215,6 +217,7 @@ main > div.project .gallery .gallery-item:before {
 #profile .bio .image {
   aspect-ratio: 1 / 1;
   padding: 0 15px;
+  overflow: hidden;
 }
 
 #profile .bio .image img {
@@ -424,11 +427,11 @@ main > div.project .gallery .gallery-item:before {
 }
 
 @media (min-width: 960px) {
+  .r_mw_lg_720 {
+    max-width: 720px;
+  }
   .r_px50py24 {
     padding: 75px;
-  }
-  .s_mw_lg_720 {
-    max-width: 720px;
   }
   main > div.project .quote {
     padding: 60px;

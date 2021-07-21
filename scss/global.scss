@@ -1,3 +1,4 @@
+/* -------------------- Variable  -------------------- */
 //Sizes 540px	720px	960px	1140px
 $size-smd: 576px;
 $size-md: 768px;
@@ -14,11 +15,72 @@ $l-gray: rgb(119,131, 144);
 $p-font: 'Noto Serif';
 $h-font: 'Montserrat', sans-serif;
 
-//Mixins
+/* -------------------- Mixins  -------------------- */
+
+// Default size margin / padding
+//Uses: 
 @mixin margin-auto {
     margin-left: auto;
     margin-right: auto;
 }
+// Uses: 
+@mixin r_px50py24 {
+    padding: 50px 24px;
+}
+//Uses: 
+@mixin r_px40py24 {
+    padding: 40px 24px;
+}
+//Uses: 
+@mixin r_px_24 {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+// Min smd size margin / padding
+@mixin r_px40py24 {
+    padding: 80px;
+}
+
+// Min md size margin / padding
+//Uses: 
+@mixin r_pt_md_72px {
+    padding-top: 72px;
+}
+//Uses: 
+@mixin r_pt_md_78px {
+    padding-top: 78px;
+}
+//Uses: 
+@mixin r_px50py24 {
+    padding: 50px 30px;
+}
+//Uses: 
+@mixin r_px40py24 {
+    padding: 100px;
+}
+//Uses: #about.personal
+@mixin r_px40py24 {
+    padding: 100px 0;
+}
+
+// Min lg size margin / padding
+//Uses: 
+@mixin r_px50py24 {
+    padding: 75px;
+}
+@mixin r_p_lg_60 {
+    padding: 60px;
+}
+
+// Min xl size margin / padding
+//Uses: 
+@mixin r_px50py24 {
+    padding: 100px;        
+}
+
+
+
 
 
 /* -------------------- Scrollbar Styles -------------------- */
@@ -53,7 +115,7 @@ $h-font: 'Montserrat', sans-serif;
     padding: 0;
 }
 
-/* -------------------- Multipage Styles (Static) -------------------- */  
+/* -------------------- Static Multipage Styles -------------------- */  
 //Widths
 .s_mw_1240 {
     max-width: 1240px;
@@ -109,9 +171,6 @@ $h-font: 'Montserrat', sans-serif;
     padding-left: 24px;
     padding-right: 24px;
 }
-
-
-
 
 
 
@@ -234,6 +293,7 @@ main > div.project {
         .image {
             aspect-ratio: 1 / 1;
             padding: 0 15px;
+            overflow: hidden;
             img {
                 aspect-ratio: 1 / 1;
                 object-fit: cover;
@@ -436,16 +496,16 @@ main > div.project {
 }
 
 @media (min-width: $size-lg){
+    .r_mw_lg_720 {
+        max-width: 720px;
+    }
     .r_px50py24 {
         padding: 75px;
-    }
-    .s_mw_lg_720 {
-        max-width: 720px;
     }
 
     main > div.project {
         .quote {
-            padding: 60px;
+            @include r_p_lg_60();
         }    
     }
 }
