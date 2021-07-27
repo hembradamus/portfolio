@@ -215,7 +215,6 @@ main > div.project .gallery .gallery-item:before {
 
 /* -------------------- Specific Pages  -------------------- */
 #profile .bio .image {
-  aspect-ratio: 1 / 1;
   padding: 0 15px;
   overflow: hidden;
 }
