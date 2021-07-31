@@ -16,13 +16,11 @@
 }
 
 /* -------------------- Bootstrap Adjustments-------------------- */
-.ratio > img {
-  height: initial;
-  -o-object-fit: cover;
-     object-fit: cover;
-  aspect-ratio: 1 /1;
-}
-
+/*.ratio>img {
+    height: initial;
+    object-fit: cover;
+    aspect-ratio: 1 /1;
+}*/
 .row {
   max-width: 1440px;
   margin-left: auto;
@@ -35,6 +33,11 @@
 
 .container-fluid {
   padding: 0;
+}
+
+.container {
+  padding-left: 9px;
+  padding-right: 9px;
 }
 
 /* -------------------- Static Multipage Styles -------------------- */
@@ -213,19 +216,31 @@ main > div.project .gallery .gallery-item:before {
   border-color: #0976b4;
 }
 
-/* -------------------- Specific Pages  -------------------- */
-#profile .bio .image {
-  padding: 0 15px;
+.square-img {
+  /*aspect-ratio: 1 / 1;*/
+  padding: 100% 15px 0;
   overflow: hidden;
+  position: relative;
 }
 
-#profile .bio .image img {
-  aspect-ratio: 1 / 1;
+.square-img img {
+  /*aspect-ratio: 1 / 1;*/
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 50% 0;
-     object-position: 50% 0;
-  width: 100%;
+  -o-object-position: top center;
+     object-position: top center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* -------------------- Specific Pages  -------------------- */
+#profile .bio .image {
+  /*aspect-ratio: 1 / 1;*/
+  padding: 0 15px 0;
+  margin-bottom: 30px;
 }
 
 #profile .bio .mini-cv {
@@ -373,17 +388,24 @@ main > div.project .gallery .gallery-item:before {
 }
 
 @media (min-width: 768px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
   .col-md-6.col-lg-4:nth-of-type(1) > div, .col-md-6.col-lg-4:nth-of-type(3) > div {
     margin: 0 28px 28px 0;
   }
   .col-md-6.col-lg-4:nth-of-type(2) > div {
     margin: 0 0 028px;
   }
-  .r_pt_md_72px {
+  .r_pt_md_72 {
     padding-top: 72px;
   }
-  .r_pt_md_78px {
+  .r_pt_md_78 {
     padding-top: 78px;
+  }
+  .r_pb_md_100 {
+    padding-bottom: 100px;
   }
   .r_px50py24 {
     padding: 50px 30px;
@@ -394,14 +416,21 @@ main > div.project .gallery .gallery-item:before {
   main > div.project .quote {
     padding: 60px 30px;
   }
+  #profile .bio.s_mb_100 {
+    margin-bottom: 130px;
+  }
   #profile .bio .image {
-    aspect-ratio: initial;
-    content-visibility: auto;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  #profile .bio .image .square-img {
     height: 460px;
     padding: 0 25px 0 15px;
   }
-  #profile .bio .image img {
-    aspect-ratio: initial;
+  #profile .bio .image .square-img img {
+    position: relative;
+    top: auto;
+    left: auto;
   }
   #profile .bio .mini-cv {
     padding: 0 15px 0 25px;
@@ -410,10 +439,10 @@ main > div.project .gallery .gallery-item:before {
     padding-top: 0;
   }
   #profile .projects .row {
-    gap: 24px;
+    gap: 14px;
   }
   #profile .projects .row .project-container {
-    width: calc(50% - 12px);
+    width: calc(50% - 7px);
   }
   #profile .projects .row .project .project-name {
     color: #fff;

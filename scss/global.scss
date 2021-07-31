@@ -97,11 +97,11 @@ $h-font: 'Montserrat', sans-serif;
 }
 
 /* -------------------- Bootstrap Adjustments-------------------- */  
-.ratio>img {
+/*.ratio>img {
     height: initial;
     object-fit: cover;
     aspect-ratio: 1 /1;
-}
+}*/
 
 .row {
     max-width: 1440px;
@@ -113,6 +113,11 @@ $h-font: 'Montserrat', sans-serif;
 
 .container-fluid {
     padding: 0;
+}
+
+.container{
+    padding-left: 9px;
+    padding-right: 9px;
 }
 
 /* -------------------- Static Multipage Styles -------------------- */  
@@ -286,20 +291,29 @@ main > div.project {
         border-color: #0976b4;
     }
 }
-
+.square-img {
+    /*aspect-ratio: 1 / 1;*/
+    padding: 100% 15px 0;
+    overflow: hidden;
+    position: relative;
+    img {
+        /*aspect-ratio: 1 / 1;*/
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
 /* -------------------- Specific Pages  -------------------- */
 #profile {
     .bio {
         .image {
-            //aspect-ratio: 1 / 1;
-            padding: 0 15px;
-            overflow: hidden;
-            img {
-                aspect-ratio: 1 / 1;
-                object-fit: cover;
-                object-position: 50% 0;
-                width: 100%;
-            }
+            /*aspect-ratio: 1 / 1;*/
+            padding: 0 15px 0;
+            margin-bottom: 30px;
         }
         .mini-cv {
             padding: 0 15px;
@@ -425,6 +439,10 @@ main > div.project {
 }
 
 @media (min-width: $size-md){
+    .container{
+        padding-left: 12px;
+        padding-right: 12px;
+    }    
     .col-md-6.col-lg-4 {
         &:nth-of-type(1) > div, &:nth-of-type(3) > div{
             margin: 0 28px 28px 0;
@@ -434,13 +452,17 @@ main > div.project {
         }
     }
 
-    .r_pt_md_72px {
+    .r_pt_md_72 {
         padding-top: 72px;
     }
-    .r_pt_md_78px {
+    .r_pt_md_78 {
         padding-top: 78px;
     }
 
+
+    .r_pb_md_100 {
+        padding-bottom: 100px;
+    }
     .r_px50py24 {
         padding: 50px 30px;
     }
@@ -457,13 +479,20 @@ main > div.project {
 
     #profile {
         .bio {
+            &.s_mb_100 {
+                margin-bottom: 130px;
+            }
             .image{
-                aspect-ratio: initial;
-                content-visibility: auto;
-                height: 460px;
-                padding: 0 25px 0 15px;
-                img {
-                    aspect-ratio: initial;
+                padding: 0;
+                margin-bottom: 0;
+                .square-img{
+                    height: 460px;
+                    padding: 0 25px 0 15px;
+                    img {
+                        position: relative;
+                        top: auto;
+                        left: auto;
+                    }
                 }
             }
             .mini-cv {
@@ -474,9 +503,9 @@ main > div.project {
         .projects {
             padding-top: 0;
             .row {
-                gap: 24px;
+                gap: 14px;
                 .project-container {
-                    width: calc(50% - 12px);
+                    width: calc(50% - 7px);
                 }
                 .project{
                     .project-name{
