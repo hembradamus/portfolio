@@ -1,0 +1,125 @@
+@import "variables";
+@import "mixins";
+
+
+#profile {
+    .bio {
+        .image {
+            /*aspect-ratio: 1 / 1;*/
+            padding: 0 15px 0;
+            margin-bottom: 30px;
+        }
+        .mini-cv {
+            padding: 0 15px;
+            p:empty:before{
+                content: "\00A0";
+            }
+            .details {
+                margin-bottom: 50px;
+            }
+        }
+    }
+    nav.profile-links{
+        li{
+            margin: 0 20px 20px 0;
+        }
+        li .nav-link{
+            background-color: white;
+            border: 1px solid rgba(66,66,66,.2);
+            border-radius: 0;
+            box-sizing: border-box;
+            /*
+            color: $gray;
+            font-feature-settings: "liga","kern";
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .5px;
+            line-height: 21px;
+            */
+            padding: 6px 18px;
+            text-transform: uppercase;
+            transition-delay: 0s;
+            transition-duration: .2s;
+            transition-property: color, background-color, fill;
+            /*&:hover{
+                background-color: rgba(66,66,66,.2);
+                border-color: white;
+                color: white;
+            }*/
+        }
+        .social {
+            margin-right: 20px;
+            a {
+                padding: 0;
+                height: 100%;
+                width: 32px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                letter-spacing: 0;
+                svg {
+                    fill: $gray;
+                }
+                &:hover svg {
+                    fill: white;
+                }
+            }
+        }
+    }
+    .projects {       
+        a{
+            text-decoration: none;
+        }
+        .project{
+            margin-bottom: 20px;
+            position: relative;
+            transition: linear .2s;
+            .project-name{
+                padding: 20px;
+                transition: opacity .2s ease-out;
+                z-index: 2;
+                .project-title{
+                    /*color: $l-gray;
+                    font-family: $h-font;
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 25px;*/
+                    margin-bottom: 7px;
+                    text-decoration: none;
+                }
+                .project-subtitle{
+                    color: $gray;
+                    font-size: 16px;
+                    line-height: 19px;
+                    opacity: .8;
+                }
+            }
+            .image-container{
+                content-visibility: auto;
+            }
+            .image-container img{
+                display: flex;
+                aspect-ratio: 1 / 1;
+                transition: .2s ease;
+            }
+            &:hover .image-container img{
+                transform: scale(1.025);
+            }
+        }
+    }
+}
+
+#project_footprint_collective {
+    .project_header {
+        background-image: url(../img/uxf/home-fc-thumb.png);
+    }
+    .background {
+        padding-bottom: 40px;
+    }
+    .footprint {
+        padding-bottom: 30px;
+    }
+    .breakdown {
+        padding-top: 30px;
+    }
+}

@@ -1,5 +1,8 @@
 /* -------------------- Variable  -------------------- */
-/* -------------------- Mixins  -------------------- */
+/* -------------------- Variable  -------------------- */
+/* -------------------- Margins -------------------- */
+/* -------------------- Padding -------------------- */
+/* -------------------- Other -------------------- */
 /* -------------------- Scrollbar Styles -------------------- */
 ::-webkit-scrollbar {
   width: 12px;
@@ -16,11 +19,15 @@
 }
 
 /* -------------------- Bootstrap Adjustments-------------------- */
-/*.ratio>img {
-    height: initial;
-    object-fit: cover;
-    aspect-ratio: 1 /1;
-}*/
+.container-fluid {
+  padding: 0;
+}
+
+.container {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
 .row {
   max-width: 1440px;
   margin-left: auto;
@@ -31,119 +38,184 @@
   padding: 0;
 }
 
-.container-fluid {
-  padding: 0;
+/*.ratio>img {
+    height: initial;
+    object-fit: cover;
+    aspect-ratio: 1 /1;
+}*/
+/* -------------------- Text  -------------------- */
+.h1, h1 {
+  font-weight: 700;
 }
 
-.container {
-  padding-left: 9px;
-  padding-right: 9px;
+/* -------------------- Images -------------------- */
+.square-img {
+  padding: 100% 15px 0;
+  overflow: hidden;
+  position: relative;
 }
 
-/* -------------------- Static Multipage Styles -------------------- */
-.s_mw_1240 {
+.square-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* -------------------- Links Buttons and Inputs -------------------- */
+a {
+  text-decoration: none;
+}
+
+button {
+  padding: 10px 30px;
+}
+
+button.submit {
+  margin: 30px 0 20px;
+}
+
+input[type=text], textarea {
+  padding: 14px 16px;
+  border: 1px solid rgba(66, 66, 66, 0.2);
+  border-radius: 1px;
+}
+
+input[type=text] {
+  margin-bottom: 20px;
+}
+
+textarea {
+  height: 260px;
+  resize: none;
+  margin-bottom: 40px;
+}
+
+/* -------------------- Containers -------------------- */
+.b_mw_1240 {
   max-width: 1240px;
 }
 
-.s_mw_1110 {
+.b_mw_1110 {
   max-width: 1110px;
 }
 
-.s_mw_900 {
+.b_mw_900 {
   max-width: 900px;
 }
 
-.s_mb_100 {
+/* -------------------- Layout - Global -------------------- */
+main > div {
   margin-bottom: 100px;
 }
 
-.s_mb_50 {
-  margin-bottom: 50px;
+/* -------------------- Modules -------------------- */
+.split-3 > div > div, .split-4 > div > div {
+  margin: 0 28px 28px;
 }
 
-.s_mb_24 {
-  margin-bottom: 24px;
+/* -------------------- Page Template Styles -------------------- */
+.profile-page {
+  /* -------------------- Variable  -------------------- */
+  /* -------------------- Variable  -------------------- */
+  /* -------------------- Margins -------------------- */
+  /* -------------------- Padding -------------------- */
+  /* -------------------- Other -------------------- */
 }
 
-.s_pb_100 {
-  padding-bottom: 100px;
+.profile-page h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
-.s_py_100 {
-  padding-bottom: 100px;
-  padding-top: 100px;
+.profile-page .content-container {
+  padding-left: 15px;
+  padding-right: 15px;
+  min-height: calc(100vh - 200px);
 }
 
-.s_py_40 {
-  padding-bottom: 40px;
-  padding-top: 40px;
-}
-
-.s_py_30 {
-  padding-bottom: 30px;
-  padding-top: 30px;
-}
-
-.s_pt_52 {
+.profile-page .page-head {
   padding-top: 52px;
 }
 
-/* -------------------- Multipage Styles (Responsive) -------------------- */
-.r_px50py24 {
-  padding: 50px 24px;
+.profile-page .page-head .col-12 {
+  /*    width: calc(100vw - 30px);
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50%;
+        margin-right: -50%;*/
 }
 
-.r_px40py24 {
-  padding: 40px 24px;
+.profile-page .page-head .col-12 > div {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.r_px_24 {
-  padding-left: 24px;
-  padding-right: 24px;
+.profile-page .page-head .header {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-/* -------------------- Specific Types -------------------- */
-.page-footer {
+.profile-page .page-head .header .back {
+  margin-bottom: 100px;
+}
+
+.profile-page .page-footer {
   height: 100px;
 }
 
-main > div.project .project_header {
+.project-page {
+  /* -------------------- Variable  -------------------- */
+  /* -------------------- Variable  -------------------- */
+  /* -------------------- Margins -------------------- */
+  /* -------------------- Padding -------------------- */
+  /* -------------------- Other -------------------- */
+}
+
+.project-page .project_header {
   background-size: cover;
   background-position: 50%;
 }
 
-main > div.project .project_header .homelink {
+.project-page .project_header .homelink {
   padding-top: 15px;
 }
 
-main > div.project .project_header .title {
+.project-page .project_header .title {
   margin: 60px auto 60px;
 }
 
-main > div.project .project_header .title h1 {
+.project-page .project_header .title h1 {
   margin-bottom: 30px;
 }
 
-main > div.project .quote {
+.project-page .quote {
   background-color: #edf1f1;
   padding: 40px 24px;
 }
 
-main > div.project .quote .text-container div:first-child {
+.project-page .quote .text-container div:first-child {
   margin-bottom: 25px;
 }
 
-main > div.project .media-col iframe {
+.project-page .media-col iframe {
   width: 100%;
   height: auto;
   aspect-ratio: 3 /2;
 }
 
-main > div.project .gallery {
+.project-page .gallery {
   background-color: #E5EFF3;
 }
 
-main > div.project .gallery .gallery-item .screen {
+.project-page .gallery .gallery-item .screen {
   border-radius: 11%;
   overflow: hidden;
   padding: 3.3%;
@@ -152,12 +224,12 @@ main > div.project .gallery .gallery-item .screen {
           transform: translateX(-50%);
 }
 
-main > div.project .gallery .gallery-item .screen .scrolling-content {
+.project-page .gallery .gallery-item .screen .scrolling-content {
   border-radius: 6%;
   overflow-y: scroll;
 }
 
-main > div.project .gallery .gallery-item:before {
+.project-page .gallery .gallery-item:before {
   content: "";
   width: 98%;
   height: 97%;
@@ -171,17 +243,17 @@ main > div.project .gallery .gallery-item:before {
   border-radius: 31px;
 }
 
-.project-footer {
+.project-page .project-footer {
   background-color: #f3f7f8;
 }
 
-.project-footer-icons {
+.project-page .project-footer-icons {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
-.project-footer-icons a {
+.project-page .project-footer-icons a {
   width: 28px;
   height: 28px;
   -webkit-box-align: center;
@@ -194,49 +266,34 @@ main > div.project .gallery .gallery-item:before {
   margin: 0 5px;
 }
 
-.project-footer-icons svg {
+.project-page .project-footer-icons svg {
   width: 14px;
   height: 14px;
   display: block;
 }
 
-.project-footer-icons a.facebook {
+.project-page .project-footer-icons a.facebook {
   background-color: #0d6efd;
   border-color: #0d6efd;
   margin-left: 24px;
 }
 
-.project-footer-icons .twitter {
+.project-page .project-footer-icons .twitter {
   background-color: #55acee;
   border-color: #55acee;
 }
 
-.project-footer-icons .linkedin {
+.project-page .project-footer-icons .linkedin {
   background-color: #0976b4;
   border-color: #0976b4;
 }
 
-.square-img {
-  /*aspect-ratio: 1 / 1;*/
-  padding: 100% 15px 0;
-  overflow: hidden;
-  position: relative;
-}
-
-.square-img img {
-  /*aspect-ratio: 1 / 1;*/
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top center;
-     object-position: top center;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* -------------------- Specific Pages  -------------------- */
+/* -------------------- Specific Page Styles  -------------------- */
+/* -------------------- Variable  -------------------- */
+/* -------------------- Variable  -------------------- */
+/* -------------------- Margins -------------------- */
+/* -------------------- Padding -------------------- */
+/* -------------------- Other -------------------- */
 #profile .bio .image {
   /*aspect-ratio: 1 / 1;*/
   padding: 0 15px 0;
@@ -249,6 +306,10 @@ main > div.project .gallery .gallery-item:before {
 
 #profile .bio .mini-cv p:empty:before {
   content: "\00A0";
+}
+
+#profile .bio .mini-cv .details {
+  margin-bottom: 50px;
 }
 
 #profile nav.profile-links li {
@@ -381,62 +442,93 @@ main > div.project .gallery .gallery-item:before {
   padding-top: 30px;
 }
 
+/* -------------------- Styles Defined Inline on UXFolio -------------------- */
+.i_mb_40 {
+  margin-bottom: 40px;
+}
+
+.i_py_40 {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.i_py_30 {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+/* -------------------- Media Queries  -------------------- */
 @media (min-width: 576px) {
-  .r_px40py24 {
+  .split-3 {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .personal {
     padding: 80px;
   }
 }
 
 @media (min-width: 768px) {
+  .bio .square-img {
+    height: 460px;
+    padding: 0 25px 0 15px;
+  }
+  .bio .square-img img {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
   .container {
     padding-left: 12px;
     padding-right: 12px;
   }
-  .col-md-6.col-lg-4:nth-of-type(1) > div, .col-md-6.col-lg-4:nth-of-type(3) > div {
-    margin: 0 28px 28px 0;
+  .no-split {
+    max-width: 720px;
   }
-  .col-md-6.col-lg-4:nth-of-type(2) > div {
-    margin: 0 0 028px;
+  .split-3, .split-4 {
+    margin-left: 75px;
+    margin-right: 75px;
   }
-  .r_pt_md_72 {
+  .split-3 > div:first-of-type > div, .split-4 > div:first-of-type > div {
+    margin-left: 0px;
+  }
+  .split-3 > div:last-of-type > div, .split-4 > div:last-of-type > div {
+    margin-right: 0px;
+  }
+  .profile-page .h1, .profile-page h1 {
+    font-size: 80px;
+  }
+  .profile-page .page-head {
     padding-top: 72px;
   }
-  .r_pt_md_78 {
+  .profile-page .page-head .header {
     padding-top: 78px;
+    padding-left: 0;
+    padding-right: 0;
   }
-  .r_pb_md_100 {
-    padding-bottom: 100px;
-  }
-  .r_px50py24 {
+  .project-page .gallery {
     padding: 50px 30px;
   }
-  .r_px40py24 {
-    padding: 100px;
+  .project-page .split-2 > .text-col {
+    padding: 50px 30px;
   }
-  main > div.project .quote {
-    padding: 60px 30px;
-  }
-  #profile .bio.s_mb_100 {
+  #profile .bio {
+    padding-top: 78px;
     margin-bottom: 130px;
+  }
+  #profile .bio > div {
+    padding-top: 72px;
   }
   #profile .bio .image {
     padding: 0;
     margin-bottom: 0;
-  }
-  #profile .bio .image .square-img {
-    height: 460px;
-    padding: 0 25px 0 15px;
-  }
-  #profile .bio .image .square-img img {
-    position: relative;
-    top: auto;
-    left: auto;
   }
   #profile .bio .mini-cv {
     padding: 0 15px 0 25px;
   }
   #profile .projects {
     padding-top: 0;
+    padding-bottom: 100px;
   }
   #profile .projects .row {
     gap: 14px;
@@ -455,35 +547,39 @@ main > div.project .gallery .gallery-item:before {
   #profile .projects .row .project .project-name .project-subtitle {
     color: white;
   }
-  #about .personal.r_px40py24 {
-    padding: 100px 0;
+  #about .details {
+    padding: 50px 30px;
+    max-width: 720px;
+  }
+  #about .attributes {
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+  #contact .contact-form > div.row {
+    padding: 50px 30px;
   }
 }
 
 @media (min-width: 960px) {
-  .col-md-6.col-lg-4:nth-of-type(1) > div {
-    margin: 0 28px 0 0;
+  .split-3 {
+    margin-left: auto;
+    margin-right: auto;
   }
-  .col-md-6.col-lg-4:nth-of-type(2) > div {
-    margin: 0 28px 0;
-  }
-  .col-md-6.col-lg-4:nth-of-type(3) > div {
-    margin: 0 0 0 28px;
-  }
-  .r_mw_lg_720 {
-    max-width: 720px;
-  }
-  .r_px50py24 {
+  #about .details, #contact .contact-form > div.row {
     padding: 75px;
   }
-  main > div.project .quote {
-    padding: 60px;
+  #about .overview img {
+    padding: 0 21px 0 24px;
   }
 }
 
 @media (min-width: 1200px) {
-  .r_px50py24 {
+  #about .details {
     padding: 100px;
+  }
+  #contact .contact-form > div.row {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 /*# sourceMappingURL=global.css.map */

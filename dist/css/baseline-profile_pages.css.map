@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "ACEA,yDAAyD;AAAzD,yDAAyD;ACCzD,uDAAuD;AA2BvD,uDAAuD;AAiEvD,qDAAqD;AF5FrD,AAAA,kBAAkB,CAAC;EACf,UAAU,EAAE,mBAAmB;CAClC;;AACD,AAAA,UAAU,CAAC;EACP,WAAW,EAAE,IAAI;CAUpB;;AAXD,AAEI,UAFM,CAEN,OAAO,CAAC;EEyFR;;;;;6BAKyB;CF5FxB;;AAJL,AEiGQ,UFjGE,CAEN,OAAO,GE+FC,GAAG,CAAC;EACJ,SAAS,EAAE,MAAM;EA7FzB,WAAW,EAAE,IAAI;EACjB,YAAY,EAAE,IAAI;CA8Fb;;AFpGT,AAKI,UALM,CAKN,OAAO,CAAC;EEiCR,YAAY,EAAE,IAAI;EAClB,aAAa,EAAE,IAAI;CF7BlB;;AAVL,AAOQ,UAPE,CAKN,OAAO,CAEH,KAAK,CAAC;EEPV,aAAa,EAAE,KAAK;CFSf;;AAGT,AAAA,YAAY,CAAC;EACT,MAAM,EAAE,KAAK;CAChB",
+    "sources": [
+        "../../scss/baseline-profile_pages.scss",
+        "../../scss/variables.scss",
+        "../../scss/mixins-layout.scss",
+        "../../scss/variables.scss"
+    ],
+    "names": [],
+    "file": "baseline-profile_pages.css"
+}

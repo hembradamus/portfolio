@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACEA,yDAAyD;ADCzD,uDAAuD;AA2BvD,uDAAuD;AAiEvD,qDAAqD",
+    "sources": [
+        "../../scss/mixins (margin and padding).scss",
+        "../../scss/variables.scss"
+    ],
+    "names": [],
+    "file": "mixins (margin and padding).css"
+}

@@ -1,0 +1,41 @@
+/* -------------------- Variable  -------------------- */
+/* -------------------- Variable  -------------------- */
+/* -------------------- Margins -------------------- */
+/* -------------------- Padding -------------------- */
+/* -------------------- Other -------------------- */
+.content-container {
+  min-height: calc(100vh - 200px);
+}
+
+.page-head {
+  padding-top: 52px;
+}
+
+.page-head .col-12 {
+  /*    width: calc(100vw - 30px);
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50%;
+        margin-right: -50%;*/
+}
+
+.page-head .col-12 > div {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-head .header {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.page-head .header .back {
+  margin-bottom: 100px;
+}
+
+.page-footer {
+  height: 100px;
+}
+/*# sourceMappingURL=baseline-profile_pages.css.map */

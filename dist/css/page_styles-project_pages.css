@@ -1,0 +1,65 @@
+/* -------------------- Variable  -------------------- */
+.project_header {
+  background-size: cover;
+  background-position: 50%;
+}
+
+.project_header .homelink {
+  padding-top: 15px;
+}
+
+.project_header .title {
+  margin: 60px auto 60px;
+}
+
+.project_header .title h1 {
+  margin-bottom: 30px;
+}
+
+.quote {
+  background-color: #edf1f1;
+  padding: 40px 24px;
+}
+
+.quote .text-container div:first-child {
+  margin-bottom: 25px;
+}
+
+.media-col iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 /2;
+}
+
+.gallery {
+  background-color: #E5EFF3;
+}
+
+.gallery .gallery-item .screen {
+  border-radius: 11%;
+  overflow: hidden;
+  padding: 3.3%;
+  width: 103%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.gallery .gallery-item .screen .scrolling-content {
+  border-radius: 6%;
+  overflow-y: scroll;
+}
+
+.gallery .gallery-item:before {
+  content: "";
+  width: 98%;
+  height: 97%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08), 0 8px 20px 2px rgba(12, 44, 76, 0.08), inset 0 2px 10px 0 rgba(0, 0, 0, 0.08), inset 0 8px 20px 2px rgba(12, 44, 76, 0.08);
+          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08), 0 8px 20px 2px rgba(12, 44, 76, 0.08), inset 0 2px 10px 0 rgba(0, 0, 0, 0.08), inset 0 8px 20px 2px rgba(12, 44, 76, 0.08);
+  border-radius: 31px;
+}
+/*# sourceMappingURL=page_styles-project_pages.css.map */

@@ -1,86 +1,5 @@
-/* -------------------- Variable  -------------------- */
-//Sizes 540px	720px	960px	1140px
-$size-smd: 576px;
-$size-md: 768px;
-$size-lg: 960px;
-$size-xl: 1200px;
-
-//Colors
-$black: rgb(40,42,43);
-$gray: rgb(66, 66, 66);
-$m-gray: rgb(88, 97, 101);
-$l-gray: rgb(119,131, 144);
-
-//Type
-$p-font: 'Noto Serif';
-$h-font: 'Montserrat', sans-serif;
-
-/* -------------------- Mixins  -------------------- */
-
-// Default size margin / padding
-//Uses: 
-@mixin margin-auto {
-    margin-left: auto;
-    margin-right: auto;
-}
-// Uses: 
-@mixin r_px50py24 {
-    padding: 50px 24px;
-}
-//Uses: 
-@mixin r_px40py24 {
-    padding: 40px 24px;
-}
-//Uses: 
-@mixin r_px_24 {
-    padding-left: 24px;
-    padding-right: 24px;
-}
-
-// Min smd size margin / padding
-@mixin r_px40py24 {
-    padding: 80px;
-}
-
-// Min md size margin / padding
-//Uses: 
-@mixin r_pt_md_72px {
-    padding-top: 72px;
-}
-//Uses: 
-@mixin r_pt_md_78px {
-    padding-top: 78px;
-}
-//Uses: 
-@mixin r_px50py24 {
-    padding: 50px 30px;
-}
-//Uses: 
-@mixin r_px40py24 {
-    padding: 100px;
-}
-//Uses: #about.personal
-@mixin r_px40py24 {
-    padding: 100px 0;
-}
-
-// Min lg size margin / padding
-//Uses: 
-@mixin r_px50py24 {
-    padding: 75px;
-}
-@mixin r_p_lg_60 {
-    padding: 60px;
-}
-
-// Min xl size margin / padding
-//Uses: 
-@mixin r_px50py24 {
-    padding: 100px;        
-}
-
-
-
+@import "variables";
+@import "mixins";
 
 
 /* -------------------- Scrollbar Styles -------------------- */
@@ -96,21 +15,8 @@ $h-font: 'Montserrat', sans-serif;
     background: #fafafa;
 }
 
+
 /* -------------------- Bootstrap Adjustments-------------------- */  
-/*.ratio>img {
-    height: initial;
-    object-fit: cover;
-    aspect-ratio: 1 /1;
-}*/
-
-.row {
-    max-width: 1440px;
-    @include margin-auto();
-    &>* {
-        padding: 0;
-    }
-}
-
 .container-fluid {
     padding: 0;
 }
@@ -120,184 +26,35 @@ $h-font: 'Montserrat', sans-serif;
     padding-right: 9px;
 }
 
-/* -------------------- Static Multipage Styles -------------------- */  
-//Widths
-.s_mw_1240 {
-    max-width: 1240px;
-}
-.s_mw_1110 {
-    max-width: 1110px;
-}
-.s_mw_900 {
-    max-width: 900px;
-}
-
-//Margins
-.s_mb_100 {
-    margin-bottom: 100px;
-}
-.s_mb_50 {
-    margin-bottom: 50px;
-}
-.s_mb_24 {
-    margin-bottom: 24px;
-}
-
-//Padding - TRBL
-.s_pb_100 {
-    padding-bottom: 100px;
-}
-
-//Padding - XY
-.s_py_100 {
-    padding-bottom: 100px;
-    padding-top: 100px;
-}
-.s_py_40 {
-    padding-bottom: 40px;
-    padding-top: 40px;
-}
-.s_py_30 {
-    padding-bottom: 30px;
-    padding-top: 30px;
-}
-.s_pt_52 {
-    padding-top: 52px;
-}
-
-/* -------------------- Multipage Styles (Responsive) -------------------- */
-.r_px50py24 {
-    padding: 50px 24px;
-}
-.r_px40py24 {
-    padding: 40px 24px;
-}
-.r_px_24 {
-    padding-left: 24px;
-    padding-right: 24px;
-}
-
-
-
-
-
-/* -------------------- Specific Types -------------------- */
-//"Page" Pages
-
-
-
-//Page Footer
-.page-footer {
-    height: 100px;
-}
-
-
-
-//Project Pages
-main > div.project {
-    //header
-    .project_header {
-        .homelink {
-            padding-top: 15px;
-        }
-        background-size: cover;
-        background-position: 50%;
-        .title {
-            margin: 60px auto 60px;
-            h1 {
-                margin-bottom: 30px;
-            }
-        }
-    }
-
-    //quotes
-    .quote {
-        background-color: rgb(237, 241, 241);
-        padding: 40px 24px;
-        .text-container div:first-child {
-            margin-bottom: 25px;
-        }
-    }
-
-    //iframes
-    .media-col {
-        iframe {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 3 /2;
-        }
-    }
-
-    //Phone mockups
-    .gallery {
-        background-color: #E5EFF3;
-        .gallery-item {
-            .screen {
-                border-radius: 11%;
-                overflow: hidden;
-                padding: 3.3%;
-                width: 103%;
-                transform: translateX(-50%);
-                .scrolling-content {
-                    border-radius: 6%;
-                    overflow-y: scroll;
-                }
-            }
-            &:before {
-                content: "";
-                width: 98%;
-                height: 97%;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%,-50%);
-                box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .08), 0 8px 20px 2px rgba(12, 44, 76, .08), inset 0 2px 10px 0 rgba(0, 0, 0, .08), inset 0 8px 20px 2px rgba(12, 44, 76, .08);
-                border-radius: 31px;
-            }
-        }  
-    }    
-}
-
-//Project Footers
-.project-footer {
-    background-color: #f3f7f8;
-}
-.project-footer-icons {
-    justify-content: flex-end;
-    a {
-        width: 28px;
-        height: 28px;
-        align-items: center;
-        justify-content: center;
-        border-radius: 100%;
-        margin: 0 5px;
-    }
-    svg {
-        width: 14px;
-        height: 14px;
-        display: block;        
-    }
-    a.facebook { 
-        background-color: #0d6efd;
-        border-color: #0d6efd;
-        margin-left: 24px;
-    }
-    .twitter {
-        background-color: #55acee;
-        border-color: #55acee;
-    }
-    .linkedin {
-        background-color: #0976b4;
-        border-color: #0976b4;
+.row {
+    max-width: 1440px;
+    @include mx_auto();
+    &>* {
+        padding: 0;
     }
 }
+
+/*.ratio>img {
+    height: initial;
+    object-fit: cover;
+    aspect-ratio: 1 /1;
+}*/
+
+
+/* -------------------- Text  -------------------- */
+.h1, h1 {
+    font-weight: 700;;
+}
+
+
+/* -------------------- Images -------------------- */
 .square-img {
-    /*aspect-ratio: 1 / 1;*/
+    //aspect-ratio: 1 / 1;
     padding: 100% 15px 0;
     overflow: hidden;
     position: relative;
     img {
-        /*aspect-ratio: 1 / 1;*/
+        //aspect-ratio: 1 / 1;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -307,193 +64,182 @@ main > div.project {
         left: 0;
     }
 }
-/* -------------------- Specific Pages  -------------------- */
-#profile {
-    .bio {
-        .image {
-            /*aspect-ratio: 1 / 1;*/
-            padding: 0 15px 0;
-            margin-bottom: 30px;
-        }
-        .mini-cv {
-            padding: 0 15px;
-            p:empty:before{
-                content: "\00A0";
-            }
-        }
-    }
-    nav.profile-links{
-        li{
-            margin: 0 20px 20px 0;
-        }
-        li .nav-link{
-            background-color: white;
-            border: 1px solid rgba(66,66,66,.2);
-            border-radius: 0;
-            box-sizing: border-box;
-            /*
-            color: $gray;
-            font-feature-settings: "liga","kern";
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: .5px;
-            line-height: 21px;
-            */
-            padding: 6px 18px;
-            text-transform: uppercase;
-            transition-delay: 0s;
-            transition-duration: .2s;
-            transition-property: color, background-color, fill;
-            /*&:hover{
-                background-color: rgba(66,66,66,.2);
-                border-color: white;
-                color: white;
-            }*/
-        }
-        .social {
-            margin-right: 20px;
-            a {
-                padding: 0;
-                height: 100%;
-                width: 32px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                letter-spacing: 0;
-                svg {
-                    fill: $gray;
-                }
-                &:hover svg {
-                    fill: white;
-                }
-            }
-        }
-    }
-    .projects {       
-        a{
-            text-decoration: none;
-        }
-        .project{
-            margin-bottom: 20px;
-            position: relative;
-            transition: linear .2s;
-            .project-name{
-                padding: 20px;
-                transition: opacity .2s ease-out;
-                z-index: 2;
-                .project-title{
-                    /*color: $l-gray;
-                    font-family: $h-font;
-                    font-size: 20px;
-                    font-weight: 700;
-                    line-height: 25px;*/
-                    margin-bottom: 7px;
-                    text-decoration: none;
-                }
-                .project-subtitle{
-                    color: $gray;
-                    font-size: 16px;
-                    line-height: 19px;
-                    opacity: .8;
-                }
-            }
-            .image-container{
-                content-visibility: auto;
-            }
-            .image-container img{
-                display: flex;
-                aspect-ratio: 1 / 1;
-                transition: .2s ease;
-            }
-            &:hover .image-container img{
-                transform: scale(1.025);
-            }
-        }
-    }    
+
+
+/* -------------------- Links Buttons and Inputs -------------------- */
+a {
+    text-decoration: none;
 }
-
-
-
-#project_footprint_collective {
-    .project_header {
-        background-image: url(../img/uxf/home-fc-thumb.png);
-    }
-    .background {
-        padding-bottom: 40px;
-    }
-    .footprint {
-        padding-bottom: 30px;
-    }
-    .breakdown {
-        padding-top: 30px;
+button {
+    padding: 10px 30px;
+    &.submit {
+        margin: 30px 0 20px;
     }
 }
 
 
+input[type=text],textarea {
+    padding: 14px 16px;
+    border: 1px solid $border-color;
+    border-radius: 1px;
+}
+input[type=text] {
+    margin-bottom: 20px;
+}
+textarea {
+    height: 260px;
+    resize: none;
+    margin-bottom: 40px;
+}
 
 
+/* -------------------- Containers -------------------- */  
+//Widths
+.b_mw_1240 {
+    max-width: 1240px;
+}
+.b_mw_1110 {
+    max-width: 1110px;
+}
+.b_mw_900 {
+    max-width: 900px;
+}
+
+
+
+/* -------------------- Layout - Global -------------------- */  
+main > div {
+    @include r_mb_100();
+}
+
+
+
+/* -------------------- Modules -------------------- */
+//.no-split {}
+
+//.split-2 {}
+
+//.split-3 {}
+
+//.split-4 {}
+
+.split-3, .split-4 {
+    & > div > div {
+        margin: 0 28px 28px;
+    }
+}
+
+
+/* -------------------- Page Template Styles -------------------- */
+//Profile Pages
+.profile-page {
+    @import "baseline-profile_template";
+}
+
+
+//Project Pages
+.project-page {
+    @import "baseline-project_template";
+}
+
+
+/* -------------------- Specific Page Styles  -------------------- */
+@import "baseline-specific_pages";
+
+
+
+/* -------------------- Styles Defined Inline on UXFolio -------------------- */
+.i_mb_40 {
+    margin-bottom: 40px;
+}
+
+.i_py_40 {
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+.i_py_30 {
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+
+/* -------------------- Media Queries  -------------------- */
 @media (min-width: $size-smd){
-    .r_px40py24 {
-        padding: 80px;
+    .split-3 {
+        @include r_mx_30();
+    }
+
+    .personal {
+        @include r_p_80();
     }
 }
 
 @media (min-width: $size-md){
+    .bio {
+        .square-img{
+            height: 460px;
+            padding: 0 25px 0 15px;
+            img {
+                position: relative;
+                top: auto;
+                left: auto;
+            }
+        }
+    }
+
     .container{
-        padding-left: 12px;
-        padding-right: 12px;
-    }    
-    .col-md-6.col-lg-4 {
-        &:nth-of-type(1) > div, &:nth-of-type(3) > div{
-            margin: 0 28px 28px 0;
+        @include r_px_12();
+    }
+
+    .no-split {
+        max-width: 720px;
+    }
+
+    .split-3, .split-4 {
+        @include r_mx_75();
+        & > div:first-of-type > div{
+            margin-left: 0px;
         }
-        &:nth-of-type(2) > div{
-            margin: 0 0 028px;
+        & > div:last-of-type > div{
+            margin-right: 0px;
         }
     }
 
-    .r_pt_md_72 {
-        padding-top: 72px;
-    }
-    .r_pt_md_78 {
-        padding-top: 78px;
-    }
-
-
-    .r_pb_md_100 {
-        padding-bottom: 100px;
-    }
-    .r_px50py24 {
-        padding: 50px 30px;
-    }
-    .r_px40py24 {
-        padding: 100px;
-    }
-
-    main > div.project {
-        .quote {
-            padding: 60px 30px;
-        }    
+    .profile-page {
+        .h1, h1 {
+            font-size: 80px;
+        }
+        .page-head {
+            @include r_pt_72();
+            .header {
+                @include r_pt_78();
+                @include r_px_0();
+            }
+        }
     }
 
 
+    .project-page {
+        .gallery {
+            @include r_px50_py30();
+        }
+        .split-2 > .text-col {
+            @include r_px50_py30();
+        }
+    }
+
+
+    //md profile styles
     #profile {
         .bio {
-            &.s_mb_100 {
-                margin-bottom: 130px;
+            @include r_pt_78();
+            margin-bottom: 130px;
+            & > div {
+                @include r_pt_72();
             }
             .image{
                 padding: 0;
                 margin-bottom: 0;
-                .square-img{
-                    height: 460px;
-                    padding: 0 25px 0 15px;
-                    img {
-                        position: relative;
-                        top: auto;
-                        left: auto;
-                    }
-                }
             }
             .mini-cv {
                 padding: 0 15px 0 25px;
@@ -502,6 +248,7 @@ main > div.project {
 
         .projects {
             padding-top: 0;
+            @include r_pb_100();
             .row {
                 gap: 14px;
                 .project-container {
@@ -524,44 +271,50 @@ main > div.project {
         }
     }
 
+    //MD about styles
     #about {
-        .personal {
-            &.r_px40py24 {
-                padding: 100px 0;
+        .details {
+            @include r_px50_py30();
+            max-width: 720px;
+        }
+        .attributes {
+            @include r_py_100();
+        }
+    }
+
+    //MD contact styles
+    #contact {
+        .contact-form {
+            & > div.row {
+                @include r_px50_py30();
             }
         }
     }
 }
 
 @media (min-width: $size-lg){
-    .col-md-6.col-lg-4 {
-        &:nth-of-type(1) > div{
-            margin: 0 28px 0 0;
-        }
-        &:nth-of-type(2) > div{
-            margin: 0 28px 0;
-        }
-        &:nth-of-type(3) > div{
-            margin: 0 0 0 28px;
-        }
+    .split-3 {
+        @include mx_auto();
     }
 
-    .r_mw_lg_720 {
-        max-width: 720px;
-    }
-    .r_px50py24 {
-        padding: 75px;
+    #about .details, #contact .contact-form > div.row {
+        @include r_p_75();
     }
 
-    main > div.project {
-        .quote {
-            @include r_p_lg_60();
-        }    
+    #about {
+        .overview {
+            img {
+                padding: 0 21px 0 24px;
+            }
+        }
     }
 }
 
 @media (min-width: $size-xl){
-    .r_px50py24 {
-        padding: 100px;        
+    #about .details {
+        @include r_p_100();
+    }
+    #contact .contact-form > div.row {
+        @include r_py_50();
     }
 }

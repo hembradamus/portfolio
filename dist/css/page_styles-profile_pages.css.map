@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "ACEA,yDAAyD;ADCzD,AAAA,kBAAkB,CAAC;EACf,UAAU,EAAE,mBAAmB;CAClC;;AACD,AAAA,UAAU,CAAC;EACP,WAAW,EAAE,IAAI;CAUpB;;AAXD,AAEI,UAFM,CAEN,OAAO,CAAC;EEkBZ;;;;;yBAKyB;CFrBpB;;AAJL,AE0BI,UF1BM,CAEN,OAAO,GEwBH,GAAG,CAAC;EACJ,SAAS,EAAE,MAAM;EAhCrB,WAAW,EAAE,IAAI;EACjB,YAAY,EAAE,IAAI;CAiCjB;;AF7BL,AAKI,UALM,CAKN,OAAO,CAAC;EEuCR,YAAY,EAAE,IAAI;EAClB,aAAa,EAAE,IAAI;CFnClB;;AAVL,AAOQ,UAPE,CAKN,OAAO,CAEH,KAAK,CAAC;EEQV,aAAa,EAAE,KAAK;CFNf;;AAGT,AAAA,YAAY,CAAC;EACT,MAAM,EAAE,KAAK;CAChB",
+    "sources": [
+        "../../scss/page_styles-profile_pages.scss",
+        "../../scss/variables.scss",
+        "../../scss/mixins (margin and padding).scss"
+    ],
+    "names": [],
+    "file": "page_styles-profile_pages.css"
+}

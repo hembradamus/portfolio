@@ -1,0 +1,153 @@
+/* -------------------- Variable  -------------------- */
+/* -------------------- Variable  -------------------- */
+/* -------------------- Margins -------------------- */
+/* -------------------- Padding -------------------- */
+/* -------------------- Other -------------------- */
+#profile .bio .image {
+  /*aspect-ratio: 1 / 1;*/
+  padding: 0 15px 0;
+  margin-bottom: 30px;
+}
+
+#profile .bio .mini-cv {
+  padding: 0 15px;
+}
+
+#profile .bio .mini-cv p:empty:before {
+  content: "\00A0";
+}
+
+#profile .bio .mini-cv .details {
+  margin-bottom: 50px;
+}
+
+#profile nav.profile-links li {
+  margin: 0 20px 20px 0;
+}
+
+#profile nav.profile-links li .nav-link {
+  background-color: white;
+  border: 1px solid rgba(66, 66, 66, 0.2);
+  border-radius: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*
+            color: $gray;
+            font-feature-settings: "liga","kern";
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .5px;
+            line-height: 21px;
+            */
+  padding: 6px 18px;
+  text-transform: uppercase;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  -webkit-transition-property: color, background-color, fill;
+  transition-property: color, background-color, fill;
+  /*&:hover{
+                background-color: rgba(66,66,66,.2);
+                border-color: white;
+                color: white;
+            }*/
+}
+
+#profile nav.profile-links .social {
+  margin-right: 20px;
+}
+
+#profile nav.profile-links .social a {
+  padding: 0;
+  height: 100%;
+  width: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 0;
+}
+
+#profile nav.profile-links .social a svg {
+  fill: #424242;
+}
+
+#profile nav.profile-links .social a:hover svg {
+  fill: white;
+}
+
+#profile .projects a {
+  text-decoration: none;
+}
+
+#profile .projects .project {
+  margin-bottom: 20px;
+  position: relative;
+  -webkit-transition: linear .2s;
+  transition: linear .2s;
+}
+
+#profile .projects .project .project-name {
+  padding: 20px;
+  -webkit-transition: opacity .2s ease-out;
+  transition: opacity .2s ease-out;
+  z-index: 2;
+}
+
+#profile .projects .project .project-name .project-title {
+  /*color: $l-gray;
+                    font-family: $h-font;
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 25px;*/
+  margin-bottom: 7px;
+  text-decoration: none;
+}
+
+#profile .projects .project .project-name .project-subtitle {
+  color: #424242;
+  font-size: 16px;
+  line-height: 19px;
+  opacity: .8;
+}
+
+#profile .projects .project .image-container {
+  content-visibility: auto;
+}
+
+#profile .projects .project .image-container img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  aspect-ratio: 1 / 1;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+#profile .projects .project:hover .image-container img {
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
+}
+
+#project_footprint_collective .project_header {
+  background-image: url(../img/uxf/home-fc-thumb.png);
+}
+
+#project_footprint_collective .background {
+  padding-bottom: 40px;
+}
+
+#project_footprint_collective .footprint {
+  padding-bottom: 30px;
+}
+
+#project_footprint_collective .breakdown {
+  padding-top: 30px;
+}
+/*# sourceMappingURL=baseline-specific_pages.css.map */

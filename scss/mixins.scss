@@ -1,0 +1,123 @@
+@import "variables";
+
+
+/* -------------------- Margins -------------------- */
+// 1 Dimension
+@mixin r_mb_100 {
+    margin-bottom: 100px;
+}
+@mixin r_mb_50 {
+    margin-bottom: 50px;
+}
+
+// 2 Dimensions
+@mixin mx_auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+@mixin r_mx_100 {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+@mixin r_mx_75 {
+    margin-left: 75px;
+    margin-right: 75px;
+}
+@mixin r_mx_30 {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+
+
+
+/* -------------------- Padding -------------------- */
+// 1 Dimension
+@mixin r_pt_78 {
+    padding-top: 78px;
+}
+@mixin r_pt_72 {
+    padding-top: 72px;
+}
+@mixin r_pb_100 {
+    padding-bottom: 100px;
+}
+
+// 2 Dimensions
+@mixin r_px_24 {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+@mixin r_px_24 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@mixin r_px_15 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@mixin r_px_12 {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+@mixin r_px_0 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@mixin r_py_100 {
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
+@mixin r_py_50 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+// All Dimensions
+@mixin r_p_100 {
+    padding: 100px;
+}
+@mixin r_p_80 {
+    padding: 80px;
+}
+@mixin r_p_75 {
+    padding: 75px;
+}
+@mixin r_p_lg_60 {
+    padding: 60px;
+}
+@mixin r_px50_py30 {
+    padding: 50px 30px;
+}
+@mixin r_px50py24 {
+    padding: 50px 24px;
+}
+//Uses: 
+@mixin r_px40py24 {
+    padding: 40px 24px;
+}
+//Uses: 
+@mixin r_px50py24 {
+    padding: 50px 30px;
+}
+//Uses: 
+@mixin r_px40py24 {
+    padding: 100px;
+}
+
+
+
+/* -------------------- Other -------------------- */
+@mixin big_width {
+    /*    width: calc(100vw - 30px);
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50%;
+        margin-right: -50%;*/
+        & > div {
+            max-width: 1440px;
+            @include mx_auto();
+        }
+    }
