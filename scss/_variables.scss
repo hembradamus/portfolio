@@ -7,8 +7,6 @@ $size-md: 768px;
 $size-lg: 960px;
 $size-xl: 1200px;
 
-$small-rail: 15px;
-
 //Colors
 $black: rgb(40,42,43);
 $gray: rgb(66, 66, 66);
@@ -16,6 +14,9 @@ $m-gray: rgb(88, 97, 101);
 $l-gray: rgb(119,131, 144);
 $border-color: rgba(66, 66, 66, .2);
 
+$link-color: rgb(0, 184, 255);
+
 //Type
-$p-font: 'Noto Serif';
+$btn-font: 'Lato', sans-serif;
+$p-font: 'Noto Serif', serif;
 $h-font: 'Montserrat', sans-serif;

@@ -24,8 +24,8 @@
 }
 
 .container {
-  padding-left: 9px;
-  padding-right: 9px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .row {
@@ -44,8 +44,38 @@
     aspect-ratio: 1 /1;
 }*/
 /* -------------------- Text  -------------------- */
+body {
+  -webkit-font-feature-settings: "liga", "kern";
+          font-feature-settings: "liga", "kern";
+  text-rendering: optimizeLegibility;
+}
+
 .h1, h1 {
+  font-size: 32px;
+  line-height: 36px;
   font-weight: 700;
+}
+
+.h2, h2 {
+  font-size: 28px;
+  line-height: 30px;
+}
+
+.h3, h3 {
+  font-size: 17px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+.h4, h4 {
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 /* -------------------- Images -------------------- */
@@ -73,7 +103,16 @@ a {
 }
 
 button {
-  padding: 10px 30px;
+  background-color: #00b8ff;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 21px;
+  padding: 10px 32px;
+  text-transform: uppercase;
 }
 
 button.submit {
@@ -81,9 +120,31 @@ button.submit {
 }
 
 input[type=text], textarea {
-  padding: 14px 16px;
   border: 1px solid rgba(66, 66, 66, 0.2);
   border-radius: 1px;
+  line-height: 27px;
+  padding: 14px 16px;
+}
+
+input[type=text]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+input[type=text]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  font-style: italic;
+}
+
+input[type=text]::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  font-style: italic;
+}
+
+input[type=text]::placeholder, textarea::placeholder {
+  font-style: italic;
+}
+
+input[type=text]:focus, textarea:focus {
+  border-radius: 0;
+  border-color: #00b8ff;
 }
 
 input[type=text] {
@@ -91,9 +152,10 @@ input[type=text] {
 }
 
 textarea {
+  display: block;
   height: 260px;
-  resize: none;
   margin-bottom: 40px;
+  resize: none;
 }
 
 /* -------------------- Containers -------------------- */
@@ -115,8 +177,23 @@ main > div {
 }
 
 /* -------------------- Modules -------------------- */
+.no-split, .split-3 {
+  padding-bottom: 100px;
+  padding-top: 100px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.no-split p, .split-3 p {
+  font-style: italic;
+}
+
+.no-split > div:last-child > div, .no-split p:last-of-type, .split-3 > div:last-child > div, .split-3 p:last-of-type {
+  margin-bottom: 0;
+}
+
 .split-3 > div > div, .split-4 > div > div {
-  margin: 0 28px 28px;
+  margin: 0 0 56px;
 }
 
 /* -------------------- Page Template Styles -------------------- */
@@ -128,39 +205,77 @@ main > div {
   /* -------------------- Other -------------------- */
 }
 
-.profile-page h3 {
+.profile-page > div {
+  font-family: "Noto Serif", serif;
+}
+
+.profile-page h1, .profile-page .h1,
+.profile-page h2, .profile-page .h2,
+.profile-page h3, .profile-page .h3,
+.profile-page h4, .profile-page .h4,
+.profile-page nav, .profile-page .back a, .profile-page footer {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.profile-page h1, .profile-page .h1 {
+  font-weight: 700;
+}
+
+.profile-page h3, .profile-page p {
   margin-top: 0;
   margin-bottom: 20px;
 }
 
+.profile-page .header h1 {
+  margin-bottom: 20px;
+}
+
+.profile-page .header .back {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
 .profile-page .content-container {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 24px;
+  padding-right: 24px;
   min-height: calc(100vh - 200px);
 }
 
 .profile-page .page-head {
+  overflow: hidden;
   padding-top: 52px;
 }
 
 .profile-page .page-head .col-12 {
-  /*    width: calc(100vw - 30px);
-        position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -50%;
-        margin-right: -50%;*/
+  width: calc(100vw);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: calc(-50% - 30px);
+  margin-right: calc(-50% - 30px);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 15px;
+  padding: 0 15px;
 }
 
 .profile-page .page-head .col-12 > div {
-  max-width: 1440px;
+  width: 1440px;
+  max-width: 100%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/span 12;
   margin-left: auto;
   margin-right: auto;
 }
 
 .profile-page .page-head .header {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .profile-page .page-head .header .back {
@@ -294,18 +409,35 @@ main > div {
 /* -------------------- Margins -------------------- */
 /* -------------------- Padding -------------------- */
 /* -------------------- Other -------------------- */
+#profile .bio {
+  margin-bottom: 100px;
+}
+
 #profile .bio .image {
   /*aspect-ratio: 1 / 1;*/
-  padding: 0 15px 0;
   margin-bottom: 30px;
 }
 
-#profile .bio .mini-cv {
-  padding: 0 15px;
+#profile .bio .mini-cv h1 {
+  font-size: 56px;
+  line-height: 58px;
+}
+
+#profile .bio .mini-cv h2 {
+  font-size: 25px;
+  line-height: 27px;
 }
 
 #profile .bio .mini-cv p:empty:before {
   content: "\00A0";
+}
+
+#profile .bio .mini-cv p:first-of-type {
+  margin-bottom: 0;
+}
+
+#profile .bio .mini-cv p {
+  line-height: 21px;
 }
 
 #profile .bio .mini-cv .details {
@@ -322,14 +454,12 @@ main > div {
   border-radius: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  /*
-            color: $gray;
-            font-feature-settings: "liga","kern";
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: .5px;
-            line-height: 21px;
-            */
+  -webkit-font-feature-settings: "liga","kern";
+          font-feature-settings: "liga","kern";
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  line-height: 21px;
   padding: 6px 18px;
   text-transform: uppercase;
   -webkit-transition-delay: 0s;
@@ -373,12 +503,8 @@ main > div {
   fill: white;
 }
 
-#profile .projects a {
-  text-decoration: none;
-}
-
 #profile .projects .project {
-  margin-bottom: 20px;
+  margin-bottom: 100px;
   position: relative;
   -webkit-transition: linear .2s;
   transition: linear .2s;
@@ -392,11 +518,10 @@ main > div {
 }
 
 #profile .projects .project .project-name .project-title {
-  /*color: $l-gray;
-                    font-family: $h-font;
-                    font-size: 20px;
-                    font-weight: 700;
-                    line-height: 25px;*/
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
   margin-bottom: 7px;
   text-decoration: none;
 }
@@ -424,6 +549,30 @@ main > div {
 #profile .projects .project:hover .image-container img {
   -webkit-transform: scale(1.025);
           transform: scale(1.025);
+}
+
+#about .overview .details {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+#about .overview h3 {
+  margin-top: 20px;
+}
+
+#contact > div {
+  padding-bottom: 80px;
+}
+
+#contact form {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#contact form > div:first-of-type {
+  margin-bottom: 30px;
 }
 
 #project_footprint_collective .project_header {
@@ -463,21 +612,15 @@ main > div {
     margin-left: 30px;
     margin-right: 30px;
   }
+  .split-3 > div > div, .split-4 > div > div {
+    margin: 0 28px 28px;
+  }
   .personal {
     padding: 80px;
   }
 }
 
 @media (min-width: 768px) {
-  .bio .square-img {
-    height: 460px;
-    padding: 0 25px 0 15px;
-  }
-  .bio .square-img img {
-    position: relative;
-    top: auto;
-    left: auto;
-  }
   .container {
     padding-left: 12px;
     padding-right: 12px;
@@ -495,16 +638,31 @@ main > div {
   .split-3 > div:last-of-type > div, .split-4 > div:last-of-type > div {
     margin-right: 0px;
   }
-  .profile-page .h1, .profile-page h1 {
+  .profile-page h1, .profile-page .h1 {
     font-size: 80px;
+    line-height: 91px;
+  }
+  .profile-page h2, .profile-page .h2 {
+    font-size: 40px;
+    line-height: 43px;
+  }
+  .profile-page h3, .profile-page .h3 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .profile-page h4, .profile-page .h4 {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  .profile-page p {
+    font-size: 16px;
+    line-height: 27px;
   }
   .profile-page .page-head {
     padding-top: 72px;
   }
   .profile-page .page-head .header {
     padding-top: 78px;
-    padding-left: 0;
-    padding-right: 0;
   }
   .project-page .gallery {
     padding: 50px 30px;
@@ -523,8 +681,33 @@ main > div {
     padding: 0;
     margin-bottom: 0;
   }
+  #profile .bio .image .square-img {
+    height: 460px;
+    padding: 0 25px 0 15px;
+  }
+  #profile .bio .image .square-img img {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
   #profile .bio .mini-cv {
     padding: 0 15px 0 25px;
+  }
+  #profile .bio .mini-cv h1 {
+    font-size: 80px;
+    line-height: 83px;
+  }
+  #profile .bio .mini-cv h2, #profile .bio .mini-cv .h2 {
+    font-size: 36px;
+    line-height: 39px;
+  }
+  #profile .bio .mini-cv p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  #profile .bio nav.profile-links li .nav-link {
+    font-size: 14px;
+    line-height: 18px;
   }
   #profile .projects {
     padding-top: 0;
@@ -565,6 +748,10 @@ main > div {
     margin-left: auto;
     margin-right: auto;
   }
+  .profile-page .page-head .header {
+    padding-left: 0;
+    padding-right: 0;
+  }
   #about .details, #contact .contact-form > div.row {
     padding: 75px;
   }
@@ -575,7 +762,10 @@ main > div {
 
 @media (min-width: 1200px) {
   #about .details {
-    padding: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   #contact .contact-form > div.row {
     padding-top: 50px;

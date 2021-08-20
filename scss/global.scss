@@ -1,5 +1,5 @@
-@import "variables";
-@import "mixins";
+@import "_variables";
+@import "_mixins";
 
 
 /* -------------------- Scrollbar Styles -------------------- */
@@ -22,8 +22,8 @@
 }
 
 .container{
-    padding-left: 9px;
-    padding-right: 9px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .row {
@@ -42,10 +42,33 @@
 
 
 /* -------------------- Text  -------------------- */
-.h1, h1 {
-    font-weight: 700;;
+body {
+    font-feature-settings: "liga", "kern";
+    text-rendering: optimizeLegibility;
 }
-
+.h1, h1 {
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 700;
+}
+.h2, h2 {
+    font-size: 28px;
+    line-height: 30px;
+}
+.h3, h3 {
+    font-size: 17px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+.h4, h4 {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 20px;
+}
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
 
 /* -------------------- Images -------------------- */
 .square-img {
@@ -71,7 +94,16 @@ a {
     text-decoration: none;
 }
 button {
-    padding: 10px 30px;
+    background-color: $link-color;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    font-family: $btn-font;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 21px;
+    padding: 10px 32px;
+    text-transform: uppercase;
     &.submit {
         margin: 30px 0 20px;
     }
@@ -79,17 +111,26 @@ button {
 
 
 input[type=text],textarea {
-    padding: 14px 16px;
     border: 1px solid $border-color;
     border-radius: 1px;
+    line-height: 27px;
+    padding: 14px 16px;
+    &::placeholder {
+        font-style: italic;
+    }
+    &:focus {
+        border-radius: 0;
+        border-color: $link-color;
+    }
 }
 input[type=text] {
     margin-bottom: 20px;
 }
 textarea {
+    display: block;
     height: 260px;
-    resize: none;
     margin-bottom: 40px;
+    resize: none;
 }
 
 
@@ -123,9 +164,20 @@ main > div {
 
 //.split-4 {}
 
+.no-split, .split-3 {
+    @include r_py_100();
+    @include r_px_24();
+    p {
+        font-style: italic;
+    }
+    & > div:last-child > div, p:last-of-type{
+        margin-bottom: 0;
+    }
+}    
+
 .split-3, .split-4 {
     & > div > div {
-        margin: 0 28px 28px;
+        margin: 0 0 56px;
     }
 }
 
@@ -133,18 +185,18 @@ main > div {
 /* -------------------- Page Template Styles -------------------- */
 //Profile Pages
 .profile-page {
-    @import "baseline-profile_template";
+    @import "_baseline-profile_template";
 }
 
 
 //Project Pages
 .project-page {
-    @import "baseline-project_template";
+    @import "_baseline-project_template";
 }
 
 
 /* -------------------- Specific Page Styles  -------------------- */
-@import "baseline-specific_pages";
+@import "_baseline-specific_pages";
 
 
 
@@ -168,6 +220,12 @@ main > div {
     .split-3 {
         @include r_mx_30();
     }
+    .split-3, .split-4 {
+        & > div > div {
+            margin: 0 28px 28px;
+        }
+    }
+    
 
     .personal {
         @include r_p_80();
@@ -175,18 +233,6 @@ main > div {
 }
 
 @media (min-width: $size-md){
-    .bio {
-        .square-img{
-            height: 460px;
-            padding: 0 25px 0 15px;
-            img {
-                position: relative;
-                top: auto;
-                left: auto;
-            }
-        }
-    }
-
     .container{
         @include r_px_12();
     }
@@ -206,14 +252,30 @@ main > div {
     }
 
     .profile-page {
-        .h1, h1 {
+        h1, .h1 {
             font-size: 80px;
+            line-height: 91px;
+        }
+        h2, .h2 {
+            font-size: 40px;
+            line-height: 43px;
+        }
+        h3, .h3 {
+            font-size: 24px;
+            line-height: 29px;
+        }
+        h4, .h4 {
+            font-size: 20px;
+            line-height: 27px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 27px;
         }
         .page-head {
             @include r_pt_72();
             .header {
                 @include r_pt_78();
-                @include r_px_0();
             }
         }
     }
@@ -240,9 +302,36 @@ main > div {
             .image{
                 padding: 0;
                 margin-bottom: 0;
+                .square-img{
+                    height: 460px;
+                    padding: 0 25px 0 15px;
+                    img {
+                        position: relative;
+                        top: auto;
+                        left: auto;
+                    }
+                }
             }
             .mini-cv {
                 padding: 0 15px 0 25px;
+                h1 {
+                    font-size: 80px;
+                    line-height: 83px;
+                }
+                h2, .h2 {
+                    font-size: 36px;
+                    line-height: 39px;
+                }
+                p {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+            }
+            nav.profile-links{
+                li .nav-link{
+                    font-size: 14px;
+                    line-height: 18px;
+                }
             }
         }
 
@@ -297,6 +386,14 @@ main > div {
         @include mx_auto();
     }
 
+    .profile-page {
+        .page-head {
+            .header {
+                @include r_px_0();
+            }
+        }
+    }
+
     #about .details, #contact .contact-form > div.row {
         @include r_p_75();
     }
@@ -312,7 +409,8 @@ main > div {
 
 @media (min-width: $size-xl){
     #about .details {
-        @include r_p_100();
+        @include r_px_100();
+        @include r_py_0();
     }
     #contact .contact-form > div.row {
         @include r_py_50();

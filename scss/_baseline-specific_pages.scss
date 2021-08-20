@@ -1,18 +1,31 @@
-@import "variables";
-@import "mixins";
+@import "_variables";
+@import "_mixins";
 
 
 #profile {
     .bio {
+        margin-bottom: 100px;
         .image {
             /*aspect-ratio: 1 / 1;*/
-            padding: 0 15px 0;
             margin-bottom: 30px;
         }
         .mini-cv {
-            padding: 0 15px;
+            h1 {
+                font-size: 56px;
+                line-height: 58px;
+            }
+            h2 {
+                font-size: 25px;
+                line-height: 27px;
+            }
             p:empty:before{
                 content: "\00A0";
+            }
+            p:first-of-type {
+                margin-bottom: 0;
+            }
+            p {
+                line-height: 21px;
             }
             .details {
                 margin-bottom: 50px;
@@ -28,14 +41,12 @@
             border: 1px solid rgba(66,66,66,.2);
             border-radius: 0;
             box-sizing: border-box;
-            /*
-            color: $gray;
+            //color: $gray;
             font-feature-settings: "liga","kern";
             font-size: 12px;
             font-weight: 700;
             letter-spacing: .5px;
             line-height: 21px;
-            */
             padding: 6px 18px;
             text-transform: uppercase;
             transition-delay: 0s;
@@ -66,12 +77,9 @@
             }
         }
     }
-    .projects {       
-        a{
-            text-decoration: none;
-        }
+    .projects {
         .project{
-            margin-bottom: 20px;
+            margin-bottom: 100px;
             position: relative;
             transition: linear .2s;
             .project-name{
@@ -79,11 +87,11 @@
                 transition: opacity .2s ease-out;
                 z-index: 2;
                 .project-title{
-                    /*color: $l-gray;
+                    //color: $l-gray;
                     font-family: $h-font;
                     font-size: 20px;
                     font-weight: 700;
-                    line-height: 25px;*/
+                    line-height: 25px;
                     margin-bottom: 7px;
                     text-decoration: none;
                 }
@@ -105,6 +113,30 @@
             &:hover .image-container img{
                 transform: scale(1.025);
             }
+        }
+    }
+}
+
+#about {
+    .overview {
+        .details {
+            @include r_my_50();
+            @include r_mx_24();
+        }
+        h3 {
+            margin-top: 20px;
+        }
+    }
+}
+
+#contact {
+    & > div {
+        padding-bottom: 80px;
+    }
+    form{
+        @include r_py_40();
+        &  > div:first-of-type {
+            margin-bottom: 30px;
         }
     }
 }
