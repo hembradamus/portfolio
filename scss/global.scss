@@ -43,24 +43,29 @@
 
 /* -------------------- Text  -------------------- */
 body {
+    color: $body-color;
     font-feature-settings: "liga", "kern";
     text-rendering: optimizeLegibility;
 }
-.h1, h1 {
+h1, .h1 {
+    color: $black;
     font-size: 32px;
     line-height: 36px;
     font-weight: 700;
 }
-.h2, h2 {
+h2,.h2,h3,.h3,h4,.h4 {
+    color: $h2-color;
+}
+h2, .h2 {
     font-size: 28px;
     line-height: 30px;
 }
-.h3, h3 {
+h3, .h3 {
     font-size: 17px;
     line-height: 20px;
     margin-bottom: 20px;
 }
-.h4, h4 {
+h4, .h4 {
     font-size: 16px;
     line-height: 19px;
     margin-bottom: 20px;
@@ -91,6 +96,7 @@ p {
 
 /* -------------------- Links Buttons and Inputs -------------------- */
 a {
+    color: $link-color;
     text-decoration: none;
 }
 button {
@@ -113,7 +119,7 @@ button {
 input[type=text],textarea {
     border: 1px solid $border-color;
     border-radius: 1px;
-    line-height: 27px;
+    line-height: 24px;
     padding: 14px 16px;
     &::placeholder {
         font-style: italic;
@@ -181,6 +187,11 @@ main > div {
     }
 }
 
+footer {
+    a {
+        color: $footer-color;
+    }
+}
 
 /* -------------------- Page Template Styles -------------------- */
 //Profile Pages
@@ -217,65 +228,94 @@ main > div {
 
 /* -------------------- Media Queries  -------------------- */
 @media (min-width: $size-smd){
-    .split-3 {
-        @include r_mx_30();
-    }
     .split-3, .split-4 {
+        @include r_px_0();
+
         & > div > div {
-            margin: 0 28px 28px;
+            @include r_px_24();
         }
     }
-    
+    #about {
+        .image img {
+            max-height: 40vh;
+        }
+    }
 
-    .personal {
-        @include r_p_80();
+    #contact {
+        & > div {
+            padding-bottom: 23px;
+        }
+        .no-split {
+            padding-top: 11px;
+        }
     }
 }
 
 @media (min-width: $size-md){
+    input {
+        line-height: 27px;
+    }
     .container{
         @include r_px_12();
     }
 
-    .no-split {
-        max-width: 720px;
+    .no-split, .split-3 {
+        //max-width: 720px;
+        @include r_px_30();
     }
 
     .split-3, .split-4 {
-        @include r_mx_75();
-        & > div:first-of-type > div{
+        & > div > div {
+            @include r_mx_28();
+            padding-left: inherit;
+            padding-right: inherit;
+        }
+        & > div:first-of-type > div, & > div:nth-of-type(odd) > div{
             margin-left: 0px;
+        }
+        & > div:nth-of-type(even) > div{
+            margin-right: 0px;
         }
         & > div:last-of-type > div{
             margin-right: 0px;
+            margin-right: 28px;
         }
     }
 
     .profile-page {
-        h1, .h1 {
-            font-size: 80px;
-            line-height: 91px;
+        .content-container {
+            h1, .h1 {
+                font-size: 80px;
+                line-height: 91px;
+            }
+            h2, .h2 {
+                font-size: 40px;
+                line-height: 43px;
+            }
+            h3, .h3 {
+                font-size: 24px;
+                line-height: 29px;
+            }
+            h4, .h4 {
+                font-size: 20px;
+                line-height: 27px;
+            }
+            p {
+                font-size: 16px;
+            }
+            div, p, input {
+                line-height: 27px;
+            }
+            @include r_px_12();
         }
-        h2, .h2 {
-            font-size: 40px;
-            line-height: 43px;
-        }
-        h3, .h3 {
-            font-size: 24px;
-            line-height: 29px;
-        }
-        h4, .h4 {
-            font-size: 20px;
-            line-height: 27px;
-        }
-        p {
-            font-size: 16px;
-            line-height: 27px;
-        }
+
         .page-head {
             @include r_pt_72();
             .header {
                 @include r_pt_78();
+                & > div {
+                    margin-left: 12px;
+                }
             }
         }
     }
@@ -283,16 +323,19 @@ main > div {
 
     .project-page {
         .gallery {
-            @include r_px50_py30();
+            //@include r_px50_py30();
         }
         .split-2 > .text-col {
-            @include r_px50_py30();
+            //@include r_px50_py30();
         }
     }
 
 
     //md profile styles
     #profile {
+        .content-container {
+            @include r_px_0();
+        }
         .bio {
             @include r_pt_78();
             margin-bottom: 130px;
@@ -343,6 +386,50 @@ main > div {
                 .project-container {
                     width: calc(50% - 7px);
                 }
+            }
+        }
+    }
+
+    //MD about styles
+    #about {
+        .details {
+            @include r_px_6();
+        }
+    }
+
+    //MD contact styles
+    #contact {
+        & > div {
+            padding-bottom: 11px;
+        }
+        .no-split {
+            padding-top: 11px;
+            padding-bottom: 0;
+            @include r_px_24();
+        }
+    }
+}
+
+@media (min-width: $size-992){
+    .split-3, .split-4 {
+        @include mx_auto();
+        @include r_px_70();
+        & > div > div, & > div:nth-of-type(odd) > div, & > div:nth-of-type(even) > div {
+            @include r_mx_28();
+            @include r_px_0();
+            margin-bottom: 0;
+        }
+        & > div:first-of-type > div{
+            margin-left: 0px;
+        }
+        & > div:last-of-type > div{
+            margin-right: 0px;
+        }
+    }
+
+    #profile {
+        .projects {
+            .row {
                 .project{
                     .project-name{
                         color: #fff;
@@ -358,61 +445,42 @@ main > div {
                 }
             }
         }
+
     }
 
-    //MD about styles
-    #about {
-        .details {
-            @include r_px50_py30();
-            max-width: 720px;
-        }
-        .attributes {
-            @include r_py_100();
-        }
-    }
-
-    //MD contact styles
-    #contact {
-        .contact-form {
-            & > div.row {
-                @include r_px50_py30();
-            }
-        }
-    }
-}
-
-@media (min-width: $size-lg){
-    .split-3 {
-        @include mx_auto();
-    }
-
-    .profile-page {
-        .page-head {
-            .header {
-                @include r_px_0();
-            }
-        }
-    }
-
-    #about .details, #contact .contact-form > div.row {
-        @include r_p_75();
-    }
 
     #about {
         .overview {
-            img {
-                padding: 0 21px 0 24px;
+            .details {
+                @include r_m_75();
+                @include r_px_0();
             }
+        }
+        .no-split {
+            max-width: 720px;
         }
     }
 }
 
-@media (min-width: $size-xl){
-    #about .details {
-        @include r_px_100();
-        @include r_py_0();
+@media (min-width: $size-1024){
+    .no-split {
+        @include r_px_0();
     }
+
+
+    #about{
+        .image img {
+            max-height: inherit;
+        }
+        .details {
+            @include r_px_100();
+            @include r_py_0();
+        }
+    }
+
+
     #contact .contact-form > div.row {
-        @include r_py_50();
+        padding-top: 11px;
+        padding-bottom: 0;
     }
 }

@@ -45,6 +45,9 @@ h3, p {
         @include r_px_24();
         .back {
             @include r_mb_100();
+            a {
+                color: $back-color;
+            }
         }
     }   
 }

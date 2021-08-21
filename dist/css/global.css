@@ -45,29 +45,35 @@
 }*/
 /* -------------------- Text  -------------------- */
 body {
+  color: #586165;
   -webkit-font-feature-settings: "liga", "kern";
           font-feature-settings: "liga", "kern";
   text-rendering: optimizeLegibility;
 }
 
-.h1, h1 {
+h1, .h1 {
+  color: #282a2b;
   font-size: 32px;
   line-height: 36px;
   font-weight: 700;
 }
 
-.h2, h2 {
+h2, .h2, h3, .h3, h4, .h4 {
+  color: #778390;
+}
+
+h2, .h2 {
   font-size: 28px;
   line-height: 30px;
 }
 
-.h3, h3 {
+h3, .h3 {
   font-size: 17px;
   line-height: 20px;
   margin-bottom: 20px;
 }
 
-.h4, h4 {
+h4, .h4 {
   font-size: 16px;
   line-height: 19px;
   margin-bottom: 20px;
@@ -99,6 +105,7 @@ p {
 
 /* -------------------- Links Buttons and Inputs -------------------- */
 a {
+  color: #00b8ff;
   text-decoration: none;
 }
 
@@ -122,7 +129,7 @@ button.submit {
 input[type=text], textarea {
   border: 1px solid rgba(66, 66, 66, 0.2);
   border-radius: 1px;
-  line-height: 27px;
+  line-height: 24px;
   padding: 14px 16px;
 }
 
@@ -194,6 +201,10 @@ main > div {
 
 .split-3 > div > div, .split-4 > div > div {
   margin: 0 0 56px;
+}
+
+footer a {
+  color: #373839;
 }
 
 /* -------------------- Page Template Styles -------------------- */
@@ -280,6 +291,10 @@ main > div {
 
 .profile-page .page-head .header .back {
   margin-bottom: 100px;
+}
+
+.profile-page .page-head .header .back a {
+  color: #424242;
 }
 
 .profile-page .page-footer {
@@ -454,6 +469,7 @@ main > div {
   border-radius: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: #424242;
   -webkit-font-feature-settings: "liga","kern";
           font-feature-settings: "liga","kern";
   font-size: 12px;
@@ -468,11 +484,12 @@ main > div {
           transition-duration: .2s;
   -webkit-transition-property: color, background-color, fill;
   transition-property: color, background-color, fill;
-  /*&:hover{
-                background-color: rgba(66,66,66,.2);
-                border-color: white;
-                color: white;
-            }*/
+}
+
+#profile nav.profile-links li .nav-link:hover {
+  background-color: rgba(66, 66, 66, 0.2);
+  border-color: white;
+  color: white;
 }
 
 #profile nav.profile-links .social {
@@ -504,6 +521,7 @@ main > div {
 }
 
 #profile .projects .project {
+  color: #586165;
   margin-bottom: 100px;
   position: relative;
   -webkit-transition: linear .2s;
@@ -518,6 +536,7 @@ main > div {
 }
 
 #profile .projects .project .project-name .project-title {
+  color: #778390;
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -527,7 +546,6 @@ main > div {
 }
 
 #profile .projects .project .project-name .project-subtitle {
-  color: #424242;
   font-size: 16px;
   line-height: 19px;
   opacity: .8;
@@ -563,7 +581,7 @@ main > div {
 }
 
 #contact > div {
-  padding-bottom: 80px;
+  padding-bottom: 29px;
 }
 
 #contact form {
@@ -573,6 +591,11 @@ main > div {
 
 #contact form > div:first-of-type {
   margin-bottom: 30px;
+}
+
+#contact .no-split {
+  padding-top: 1px;
+  padding-bottom: 0;
 }
 
 #project_footprint_collective .project_header {
@@ -608,54 +631,77 @@ main > div {
 
 /* -------------------- Media Queries  -------------------- */
 @media (min-width: 576px) {
-  .split-3 {
-    margin-left: 30px;
-    margin-right: 30px;
+  .split-3, .split-4 {
+    padding-left: 0;
+    padding-right: 0;
   }
   .split-3 > div > div, .split-4 > div > div {
-    margin: 0 28px 28px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
-  .personal {
-    padding: 80px;
+  #about .image img {
+    max-height: 40vh;
+  }
+  #contact > div {
+    padding-bottom: 23px;
+  }
+  #contact .no-split {
+    padding-top: 11px;
   }
 }
 
 @media (min-width: 768px) {
+  input {
+    line-height: 27px;
+  }
   .container {
     padding-left: 12px;
     padding-right: 12px;
   }
-  .no-split {
-    max-width: 720px;
+  .no-split, .split-3 {
+    padding-left: 30px;
+    padding-right: 30px;
   }
-  .split-3, .split-4 {
-    margin-left: 75px;
-    margin-right: 75px;
+  .split-3 > div > div, .split-4 > div > div {
+    margin-left: 28px;
+    margin-right: 28px;
+    padding-left: inherit;
+    padding-right: inherit;
   }
-  .split-3 > div:first-of-type > div, .split-4 > div:first-of-type > div {
+  .split-3 > div:first-of-type > div, .split-3 > div:nth-of-type(odd) > div, .split-4 > div:first-of-type > div, .split-4 > div:nth-of-type(odd) > div {
     margin-left: 0px;
+  }
+  .split-3 > div:nth-of-type(even) > div, .split-4 > div:nth-of-type(even) > div {
+    margin-right: 0px;
   }
   .split-3 > div:last-of-type > div, .split-4 > div:last-of-type > div {
     margin-right: 0px;
+    margin-right: 28px;
   }
-  .profile-page h1, .profile-page .h1 {
+  .profile-page .content-container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .profile-page .content-container h1, .profile-page .content-container .h1 {
     font-size: 80px;
     line-height: 91px;
   }
-  .profile-page h2, .profile-page .h2 {
+  .profile-page .content-container h2, .profile-page .content-container .h2 {
     font-size: 40px;
     line-height: 43px;
   }
-  .profile-page h3, .profile-page .h3 {
+  .profile-page .content-container h3, .profile-page .content-container .h3 {
     font-size: 24px;
     line-height: 29px;
   }
-  .profile-page h4, .profile-page .h4 {
+  .profile-page .content-container h4, .profile-page .content-container .h4 {
     font-size: 20px;
     line-height: 27px;
   }
-  .profile-page p {
+  .profile-page .content-container p {
     font-size: 16px;
+  }
+  .profile-page .content-container div, .profile-page .content-container p, .profile-page .content-container input {
     line-height: 27px;
   }
   .profile-page .page-head {
@@ -664,11 +710,12 @@ main > div {
   .profile-page .page-head .header {
     padding-top: 78px;
   }
-  .project-page .gallery {
-    padding: 50px 30px;
+  .profile-page .page-head .header > div {
+    margin-left: 12px;
   }
-  .project-page .split-2 > .text-col {
-    padding: 50px 30px;
+  #profile .content-container {
+    padding-left: 0;
+    padding-right: 0;
   }
   #profile .bio {
     padding-top: 78px;
@@ -719,6 +766,41 @@ main > div {
   #profile .projects .row .project-container {
     width: calc(50% - 7px);
   }
+  #about .details {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  #contact > div {
+    padding-bottom: 11px;
+  }
+  #contact .no-split {
+    padding-top: 11px;
+    padding-bottom: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  .split-3, .split-4 {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .split-3 > div > div, .split-3 > div:nth-of-type(odd) > div, .split-3 > div:nth-of-type(even) > div, .split-4 > div > div, .split-4 > div:nth-of-type(odd) > div, .split-4 > div:nth-of-type(even) > div {
+    margin-left: 28px;
+    margin-right: 28px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+  .split-3 > div:first-of-type > div, .split-4 > div:first-of-type > div {
+    margin-left: 0px;
+  }
+  .split-3 > div:last-of-type > div, .split-4 > div:last-of-type > div {
+    margin-right: 0px;
+  }
   #profile .projects .row .project .project-name {
     color: #fff;
     position: absolute;
@@ -730,37 +812,24 @@ main > div {
   #profile .projects .row .project .project-name .project-subtitle {
     color: white;
   }
-  #about .details {
-    padding: 50px 30px;
-    max-width: 720px;
-  }
-  #about .attributes {
-    padding-bottom: 100px;
-    padding-top: 100px;
-  }
-  #contact .contact-form > div.row {
-    padding: 50px 30px;
-  }
-}
-
-@media (min-width: 960px) {
-  .split-3 {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .profile-page .page-head .header {
+  #about .overview .details {
+    margin: 75px;
     padding-left: 0;
     padding-right: 0;
   }
-  #about .details, #contact .contact-form > div.row {
-    padding: 75px;
-  }
-  #about .overview img {
-    padding: 0 21px 0 24px;
+  #about .no-split {
+    max-width: 720px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
+  .no-split {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #about .image img {
+    max-height: inherit;
+  }
   #about .details {
     padding-left: 100px;
     padding-right: 100px;
@@ -768,8 +837,8 @@ main > div {
     padding-bottom: 0;
   }
   #contact .contact-form > div.row {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 11px;
+    padding-bottom: 0;
   }
 }
 /*# sourceMappingURL=global.css.map */
