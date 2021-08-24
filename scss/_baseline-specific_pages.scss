@@ -49,9 +49,6 @@
             line-height: 21px;
             padding: 6px 18px;
             text-transform: uppercase;
-            transition-delay: 0s;
-            transition-duration: .2s;
-            transition-property: color, background-color, fill;
             &:hover{
                 background-color: $nav-hover-color;
                 border-color: white;
@@ -82,7 +79,6 @@
             color: $body-color;
             margin-bottom: 100px;
             position: relative;
-            transition: linear .2s;
             .project-name{
                 padding: 20px;
                 transition: opacity .2s ease-out;

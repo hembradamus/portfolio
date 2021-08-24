@@ -11,6 +11,27 @@
 }
 
 // 2 Dimensions
+@mixin r_my_62 {
+    margin-top: 62px;
+    margin-bottom: 62px;
+}
+@mixin r_my_50 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+@mixin r_my_24 {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+@mixin r_my_20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+@mixin r_my_18 {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
 @mixin mx_auto {
     margin-left: auto;
     margin-right: auto;
@@ -22,6 +43,18 @@
 @mixin r_mx_75 {
     margin-left: 75px;
     margin-right: 75px;
+}
+@mixin r_mx_60 {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+@mixin r_mx_50 {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+@mixin r_mx_40 {
+    margin-left: 40px;
+    margin-right: 40px;
 }
 @mixin r_mx_30 {
     margin-left: 30px;
@@ -35,19 +68,30 @@
     margin-left: 24px;
     margin-right: 24px;
 }
-
-@mixin r_my_50 {
-    margin-top: 50px;
-    margin-bottom: 50px;
+@mixin r_mx_18 {
+    margin-left: 18px;
+    margin-right: 18px;
 }
-@mixin r_my_20 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+@mixin r_mx_9 {
+    margin-left: 9px;
+    margin-right: 9px;
+}
+@mixin r_mx_5 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+@mixin r_mx_0 {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 // All Dimensions
 @mixin r_m_75 {
     margin: 75px;
+}
+@mixin r_my50_mx24 {
+    @include r_my_50();
+    @include r_mx_24();
 }
 
 
@@ -67,9 +111,25 @@
 
 // 2 Dimensions
 
+@mixin r_py_120 {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 @mixin r_py_100 {
     padding-bottom: 100px;
     padding-top: 100px;
+}
+@mixin r_py_80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+@mixin r_py_70 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+@mixin r_py_60 {
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 @mixin r_py_50 {
     padding-top: 50px;
@@ -78,6 +138,18 @@
 @mixin r_py_40 {
     padding-top: 40px;
     padding-bottom: 40px;
+}
+@mixin r_py_30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+@mixin r_py_24 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+@mixin r_py_15 {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 @mixin r_py_0 {
     padding-top: 0;
@@ -91,6 +163,10 @@
 @mixin r_px_70 {
     padding-left: 70px;
     padding-right: 70px;
+}
+@mixin r_px_40 {
+    padding-left: 40px;
+    padding-right: 40px;
 }
 @mixin r_px_30 {
     padding-left: 30px;
@@ -124,8 +200,9 @@
 @mixin r_p_75 {
     padding: 75px;
 }
-@mixin r_p_lg_60 {
-    padding: 60px;
+@mixin r_py40_px24 {
+    @include r_py_40();
+    @include r_px_24();
 }
 
 

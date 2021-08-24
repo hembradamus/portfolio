@@ -17,10 +17,25 @@ $d-gray: rgb(66, 66, 66);
 $d-gray-20: rgba(66, 66, 66,.2);
 $m-gray: rgb(88, 97, 101);
 $l-gray: rgb(119,131, 144);
+$ll-gray: #d8d8d8;
+$lll-gray: #f3f7f8;
+$llll-gray: rgb(237,240,241);
+
 $blue: rgb(0,184,255);
 
+$d-green: #306932;
+$l-green: #D5F1B9;
 
-//Color Assignments
+$facebook: #3b5998;
+$linkedin: #0976b4;
+$twitter: #55acee;
+
+
+//Color Assignments - Global
+$border-color: $d-gray-20;
+
+
+//Color Assignments - Profile Pages
 $body-color: $m-gray;
 $h1-color: $black;
 $h2-color: $l-gray;
@@ -31,10 +46,16 @@ $link-color: $blue;
 $back-color: $d-gray;
 $footer-color: $dd-gray;
 
-$border-color: $d-gray-20;
+//Color Assignments - Project Pages
+$body-color-2: $ddd-gray;
+$h1-color-2: $d-green;
+$h2-color-2: $l-green;
+$header-bg-color: $d-green;
+$footer-bg: $lll-gray;
 
 
 //Typefaces
 $btn-font: 'Lato', sans-serif;
-$p-font: 'Noto Serif', serif;
+$p-font: 'Noto Serif', sans-serif;
 $h-font: 'Montserrat', sans-serif;
+$h-font-2: 'Source Sans Pro', serif;

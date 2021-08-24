@@ -1,30 +1,55 @@
 @import "_variables";
 @import "_mixins";
 
-.project_header {
-    .homelink {
-        padding-top: 15px;
+
+
+/* -------------------- Text  -------------------- */
+& > div {
+    color: $body-color-2;
+    line-height: 1.5;
+    h1,.h1,
+    .quote h2,
+    h3,.h3,
+    h4,.h4,
+    footer {
+        font-family: $h-font-2;
+        font-weight: 700;
     }
-    background-size: cover;
-    background-position: 50%;
-    .title {
-        margin: 60px auto 60px;
-        h1 {
-            margin-bottom: 30px;
-        }
+    h3, .h3 {
+        color: $h1-color-2;
+        font-size: 21px;
+        line-height: 25px;
+    }
+    p {
+        margin-bottom: 20px;
     }
 }
 
-//quotes
-.quote {
-    background-color: rgb(237, 241, 241);
-    padding: 40px 24px;
-    .text-container div:first-child {
-        margin-bottom: 25px;
-    }
+/* -------------------- Images -------------------- */
+
+
+/* -------------------- Links Buttons and Inputs -------------------- */
+a {
+    color: $body-color-2;
 }
 
-//iframe
+/* -------------------- Generic Module Components -------------------- */
+section {
+    @include r_py_100();
+}
+.no-split {
+    padding-bottom: 0;
+    .text-col {
+        @include r_py_0();
+    }
+}
+.no-split, .split-3, .split-4{
+    @include r_px_24();
+}
+.text-col {
+    @include r_py_50();
+    @include r_px_24();
+}
 .media-col {
     iframe {
         width: 100%;
@@ -32,10 +57,101 @@
         aspect-ratio: 3 /2;
     }
 }
+.caption {
+    padding-top: 20px;
+}
 
-//Phone mockups
+
+/* -------------------- Specific Modules -------------------- */
+.project_header {
+    margin-bottom: 0;
+    @include r_py_0();
+    @include r_px_0();
+    .row {
+        @include r_px_24();
+    }
+    .homelink {
+        color: white;
+        font-family: $h-font-2;
+        font-size: .75rem;
+        padding-top: 15px;
+        div:nth-of-type(2) {
+            font-size: .625rem;
+            font-style: italic;
+        }
+    }
+    background-size: cover;
+    background-position: 50%;
+    .title {
+        margin: 60px auto 100px;
+        h1 {
+            font-size: 35px;
+            line-height: 1;
+            margin-bottom: 30px;
+        }
+        h2 {
+            font-size: inherit;
+            line-height: 18px;
+        }
+        h1, h2 {
+            color: white;
+        }
+    }
+}
+
+.header {
+    background-color: $header-bg-color;
+    @include r_py_100();
+    .h1 {
+        color: $h2-color-2;        
+    }
+}
+
+.quote {
+    background-color: rgb(237, 241, 241);
+    font-family: $h-font-2;
+    padding: 60px 24px;
+    .text-container *:first-child {
+        margin-bottom: 25px;
+    }
+    .text-container *:nth-child(2) {
+        margin-bottom: 0;
+    }
+    .h2 {
+        color: $body-color-2;
+        font-style: italic;
+        quotes: "“" "”" "‘" "’";
+        &::before {
+            content: open-quote;
+        }
+        &::after {
+            content: close-quote;
+        }
+    }
+    h4 {
+        color: $body-color-2;
+        font-size: 17px;
+        line-height: 20px;
+        font-weight: 400;
+    }
+    .author {
+        font-family: $p-font;
+    }
+}
+.mockups {
+    @include r_py_0();
+}
 .gallery {
     background-color: #E5EFF3;
+    @include r_py_50();
+    @include r_px_24();
+    .row {
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+    .col-6 {
+        width: calc(50% - 15px);
+    }
     .gallery-item {
         .screen {
             border-radius: 11%;
@@ -64,34 +180,91 @@
 
 
 .project-footer {
-    background-color: #f3f7f8;
-}
-.project-footer-icons {
-    justify-content: flex-end;
-    a {
-        width: 28px;
-        height: 28px;
-        align-items: center;
-        justify-content: center;
-        border-radius: 100%;
-        margin: 0 5px;
+    background-color: $footer-bg;
+    color: $body-color-2;
+    font-family: $btn-font;
+    font-size: 18px;
+    .row {
+        margin-bottom: 16px;
     }
-    svg {
-        width: 14px;
-        height: 14px;
-        display: block;        
+    .owner-info {
+        div:nth-of-type(1) {
+            font-weight: 700;
+            line-height: 1;
+        }
+        div:nth-of-type(2) {
+            font-size: 14px;
+            font-style: italic;
+            line-height: 1.5;
+        }
     }
-    a.facebook { 
-        background-color: #0d6efd;
-        border-color: #0d6efd;
-        margin-left: 24px;
+    .footer-links {
+        @include r_my_24();
+        .footer-btn {
+            background-color: white;
+            //border: 1pt solid $border-color;
+            border-radius: 18px;
+            color: $l-gray;
+            font-family: $h-font-2;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 10px 16px;
+            text-transform: uppercase;
+        }
     }
-    .twitter {
-        background-color: #55acee;
-        border-color: #55acee;
-    }
-    .linkedin {
-        background-color: #0976b4;
-        border-color: #0976b4;
+    .project-footer-icons {
+        color: $ll-gray;
+        font-size: 14px;
+        line-height: 36px;
+        justify-content: flex-end;
+        a {
+            width: 28px;
+            height: 28px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            margin: 0 5px;
+            transition: linear .1s;
+            svg {
+                fill: white;
+            }
+            &.facebook { 
+                background-color: $facebook;
+                border-color: $facebook;
+                margin-left: 24px;
+                &:hover {
+                    svg {
+                        fill: $facebook;
+                    }
+                }
+            }
+            &.twitter {
+                background-color: $twitter;
+                border-color: $twitter;
+                &:hover {
+                    svg {
+                        fill: $twitter;
+                    }
+                }
+            }
+            &.linkedin {
+                background-color: $linkedin;
+                border-color: $linkedin;
+                &:hover {
+                    svg {
+                        fill: $linkedin;
+                    }
+                }
+            }
+            &:hover {
+                background-color: white;
+                border-color: white;
+            }
+        }
+        svg {
+            width: 14px;
+            height: 14px;
+            display: block;        
+        }
     }
 }

@@ -40,10 +40,18 @@
     aspect-ratio: 1 /1;
 }*/
 
+/* -------------------- Text  -------------------- */
+html {
+    transition-delay: 0s;
+    transition: linear .2s;
+    transition-property: color, background-color, border-color, fill;
+}
+
 
 /* -------------------- Text  -------------------- */
 body {
     color: $body-color;
+    font-family: $p-font;
     font-feature-settings: "liga", "kern";
     text-rendering: optimizeLegibility;
 }
@@ -173,9 +181,6 @@ main > div {
 .no-split, .split-3 {
     @include r_py_100();
     @include r_px_24();
-    p {
-        font-style: italic;
-    }
     & > div:last-child > div, p:last-of-type{
         margin-bottom: 0;
     }
@@ -235,6 +240,47 @@ footer {
             @include r_px_24();
         }
     }
+
+    .project-page {
+        p, li, a {
+            font-size: 18px;
+        }
+        & > div {
+            h3, .h3 {
+                font-size: 25px;
+                line-height: 28px;
+            }
+        }
+
+        .project_header {
+            .row {
+            }
+            .homelink {
+                div:nth-of-type(2) {
+                }
+            }
+            .title {
+                h1 {
+                    font-size: 48px;
+                    line-height: 51px;
+                }
+                h2 {
+                    font-size: 22px;
+                    line-height: 25px;
+                }
+                h1, h2 {
+                }
+            }
+        }
+        
+        .gallery {
+            .col-6 {
+                width: calc(31.8% - 10px);
+            }
+        }
+    }
+
+
     #about {
         .image img {
             max-height: 40vh;

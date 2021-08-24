@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* -------------------- Variable  -------------------- */
 /* -------------------- Variable  -------------------- */
 /* -------------------- Margins -------------------- */
@@ -44,8 +45,19 @@
     aspect-ratio: 1 /1;
 }*/
 /* -------------------- Text  -------------------- */
+html {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition: linear .2s;
+  transition: linear .2s;
+  -webkit-transition-property: color, background-color, border-color, fill;
+  transition-property: color, background-color, border-color, fill;
+}
+
+/* -------------------- Text  -------------------- */
 body {
   color: #586165;
+  font-family: "Noto Serif", sans-serif;
   -webkit-font-feature-settings: "liga", "kern";
           font-feature-settings: "liga", "kern";
   text-rendering: optimizeLegibility;
@@ -191,10 +203,6 @@ main > div {
   padding-right: 24px;
 }
 
-.no-split p, .split-3 p {
-  font-style: italic;
-}
-
 .no-split > div:last-child > div, .no-split p:last-of-type, .split-3 > div:last-child > div, .split-3 p:last-of-type {
   margin-bottom: 0;
 }
@@ -216,10 +224,6 @@ footer a {
   /* -------------------- Other -------------------- */
 }
 
-.profile-page > div {
-  font-family: "Noto Serif", serif;
-}
-
 .profile-page h1, .profile-page .h1,
 .profile-page h2, .profile-page .h2,
 .profile-page h3, .profile-page .h3,
@@ -236,6 +240,10 @@ footer a {
 .profile-page h3, .profile-page p {
   margin-top: 0;
   margin-bottom: 20px;
+}
+
+.profile-page .no-split p, .profile-page .split-3 p {
+  font-style: italic;
 }
 
 .profile-page .header h1 {
@@ -307,32 +315,65 @@ footer a {
   /* -------------------- Margins -------------------- */
   /* -------------------- Padding -------------------- */
   /* -------------------- Other -------------------- */
+  /* -------------------- Text  -------------------- */
+  /* -------------------- Images -------------------- */
+  /* -------------------- Links Buttons and Inputs -------------------- */
+  /* -------------------- Generic Module Components -------------------- */
+  /* -------------------- Specific Modules -------------------- */
 }
 
-.project-page .project_header {
-  background-size: cover;
-  background-position: 50%;
+.project-page > div {
+  color: #353738;
+  line-height: 1.5;
 }
 
-.project-page .project_header .homelink {
-  padding-top: 15px;
+.project-page > div h1, .project-page > div .h1,
+.project-page > div .quote h2,
+.project-page > div h3, .project-page > div .h3,
+.project-page > div h4, .project-page > div .h4,
+.project-page > div footer {
+  font-family: "Source Sans Pro", serif;
+  font-weight: 700;
 }
 
-.project-page .project_header .title {
-  margin: 60px auto 60px;
+.project-page > div h3, .project-page > div .h3 {
+  color: #306932;
+  font-size: 21px;
+  line-height: 25px;
 }
 
-.project-page .project_header .title h1 {
-  margin-bottom: 30px;
+.project-page > div p {
+  margin-bottom: 20px;
 }
 
-.project-page .quote {
-  background-color: #edf1f1;
-  padding: 40px 24px;
+.project-page a {
+  color: #353738;
 }
 
-.project-page .quote .text-container div:first-child {
-  margin-bottom: 25px;
+.project-page section {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.project-page .no-split {
+  padding-bottom: 0;
+}
+
+.project-page .no-split .text-col {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.project-page .no-split, .project-page .split-3, .project-page .split-4 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.project-page .text-col {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .project-page .media-col iframe {
@@ -341,8 +382,126 @@ footer a {
   aspect-ratio: 3 /2;
 }
 
+.project-page .caption {
+  padding-top: 20px;
+}
+
+.project-page .project_header {
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.project-page .project_header .row {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.project-page .project_header .homelink {
+  color: white;
+  font-family: "Source Sans Pro", serif;
+  font-size: .75rem;
+  padding-top: 15px;
+}
+
+.project-page .project_header .homelink div:nth-of-type(2) {
+  font-size: .625rem;
+  font-style: italic;
+}
+
+.project-page .project_header .title {
+  margin: 60px auto 100px;
+}
+
+.project-page .project_header .title h1 {
+  font-size: 35px;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+
+.project-page .project_header .title h2 {
+  font-size: inherit;
+  line-height: 18px;
+}
+
+.project-page .project_header .title h1, .project-page .project_header .title h2 {
+  color: white;
+}
+
+.project-page .header {
+  background-color: #306932;
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.project-page .header .h1 {
+  color: #D5F1B9;
+}
+
+.project-page .quote {
+  background-color: #edf1f1;
+  font-family: "Source Sans Pro", serif;
+  padding: 60px 24px;
+}
+
+.project-page .quote .text-container *:first-child {
+  margin-bottom: 25px;
+}
+
+.project-page .quote .text-container *:nth-child(2) {
+  margin-bottom: 0;
+}
+
+.project-page .quote .h2 {
+  color: #353738;
+  font-style: italic;
+  quotes: "“" "”" "‘" "’";
+}
+
+.project-page .quote .h2::before {
+  content: open-quote;
+}
+
+.project-page .quote .h2::after {
+  content: close-quote;
+}
+
+.project-page .quote h4 {
+  color: #353738;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.project-page .quote .author {
+  font-family: "Noto Serif", sans-serif;
+}
+
+.project-page .mockups {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .project-page .gallery {
   background-color: #E5EFF3;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.project-page .gallery .row {
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 30px;
+}
+
+.project-page .gallery .col-6 {
+  width: calc(50% - 15px);
 }
 
 .project-page .gallery .gallery-item .screen {
@@ -375,15 +534,52 @@ footer a {
 
 .project-page .project-footer {
   background-color: #f3f7f8;
+  color: #353738;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
 }
 
-.project-page .project-footer-icons {
+.project-page .project-footer .row {
+  margin-bottom: 16px;
+}
+
+.project-page .project-footer .owner-info div:nth-of-type(1) {
+  font-weight: 700;
+  line-height: 1;
+}
+
+.project-page .project-footer .owner-info div:nth-of-type(2) {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.project-page .project-footer .footer-links {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.project-page .project-footer .footer-links .footer-btn {
+  background-color: white;
+  border-radius: 18px;
+  color: #778390;
+  font-family: "Source Sans Pro", serif;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px 16px;
+  text-transform: uppercase;
+}
+
+.project-page .project-footer .project-footer-icons {
+  color: #d8d8d8;
+  font-size: 14px;
+  line-height: 36px;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
-.project-page .project-footer-icons a {
+.project-page .project-footer .project-footer-icons a {
   width: 28px;
   height: 28px;
   -webkit-box-align: center;
@@ -394,28 +590,51 @@ footer a {
           justify-content: center;
   border-radius: 100%;
   margin: 0 5px;
+  -webkit-transition: linear .1s;
+  transition: linear .1s;
 }
 
-.project-page .project-footer-icons svg {
-  width: 14px;
-  height: 14px;
-  display: block;
+.project-page .project-footer .project-footer-icons a svg {
+  fill: white;
 }
 
-.project-page .project-footer-icons a.facebook {
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+.project-page .project-footer .project-footer-icons a.facebook {
+  background-color: #3b5998;
+  border-color: #3b5998;
   margin-left: 24px;
 }
 
-.project-page .project-footer-icons .twitter {
+.project-page .project-footer .project-footer-icons a.facebook:hover svg {
+  fill: #3b5998;
+}
+
+.project-page .project-footer .project-footer-icons a.twitter {
   background-color: #55acee;
   border-color: #55acee;
 }
 
-.project-page .project-footer-icons .linkedin {
+.project-page .project-footer .project-footer-icons a.twitter:hover svg {
+  fill: #55acee;
+}
+
+.project-page .project-footer .project-footer-icons a.linkedin {
   background-color: #0976b4;
   border-color: #0976b4;
+}
+
+.project-page .project-footer .project-footer-icons a.linkedin:hover svg {
+  fill: #0976b4;
+}
+
+.project-page .project-footer .project-footer-icons a:hover {
+  background-color: white;
+  border-color: white;
+}
+
+.project-page .project-footer .project-footer-icons svg {
+  width: 14px;
+  height: 14px;
+  display: block;
 }
 
 /* -------------------- Specific Page Styles  -------------------- */
@@ -478,12 +697,6 @@ footer a {
   line-height: 21px;
   padding: 6px 18px;
   text-transform: uppercase;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-  -webkit-transition-duration: .2s;
-          transition-duration: .2s;
-  -webkit-transition-property: color, background-color, fill;
-  transition-property: color, background-color, fill;
 }
 
 #profile nav.profile-links li .nav-link:hover {
@@ -524,8 +737,6 @@ footer a {
   color: #586165;
   margin-bottom: 100px;
   position: relative;
-  -webkit-transition: linear .2s;
-  transition: linear .2s;
 }
 
 #profile .projects .project .project-name {
@@ -638,6 +849,24 @@ footer a {
   .split-3 > div > div, .split-4 > div > div {
     padding-left: 24px;
     padding-right: 24px;
+  }
+  .project-page p, .project-page li, .project-page a {
+    font-size: 18px;
+  }
+  .project-page > div h3, .project-page > div .h3 {
+    font-size: 25px;
+    line-height: 28px;
+  }
+  .project-page .project_header .title h1 {
+    font-size: 48px;
+    line-height: 51px;
+  }
+  .project-page .project_header .title h2 {
+    font-size: 22px;
+    line-height: 25px;
+  }
+  .project-page .gallery .col-6 {
+    width: calc(31.8% - 10px);
   }
   #about .image img {
     max-height: 40vh;
