@@ -150,6 +150,9 @@ textarea {
 
 /* -------------------- Containers -------------------- */  
 //Widths
+.b_mw_1440 {
+    max-width: 1440px;
+}
 .b_mw_1240 {
     max-width: 1240px;
 }
@@ -158,6 +161,9 @@ textarea {
 }
 .b_mw_900 {
     max-width: 900px;
+}
+.b_mw_720 {
+    max-width: 720px;
 }
 
 
@@ -368,12 +374,80 @@ footer {
 
 
     .project-page {
+        p, li, a {
+            line-height: 30px;
+        }
+        & > div {
+            h3, .h3 {
+                font-size: 30px;
+                line-height: 36px;
+            }
+        }
+
+        .text-col {
+            @include r_py_50();
+            @include r_px_30();
+        }
+        .split-4 {
+            .row {
+                column-gap: 24px;
+                & > div {
+                    width: calc(50% - 40px);
+                }
+            }
+        }
+
+        .project_header {
+            .row {
+            }
+            .homelink {
+                font-size: 1rem;
+                padding-top: 24px;
+                div:first-of-type {
+                    line-height: 1;
+                }
+                div:nth-of-type(2) {
+                    font-size: .75rem;
+                    line-height: 1.5;
+                }
+            }
+            .title {
+                h1 {
+                    font-size: 60px;
+                    line-height: 63px;
+                }
+                h2 {
+                    font-size: 22px;
+                    line-height: 25px;
+                }
+                h1, h2 {
+                }
+            }
+        }
+
+        .header {
+            h1, .h1 {
+                font-size: 60px;
+                line-height: 63px;
+            }
+        }
+
+        .quote {
+            h4 {
+                font-size: 24px;
+                line-height: 29px;
+            }
+            .h2 {
+                font-size: 40px;
+                line-height: 43px;
+            }
+        }
+        
         .gallery {
-            //@include r_px50_py30();
-        }
-        .split-2 > .text-col {
-            //@include r_px50_py30();
-        }
+            .col-6 {
+                width: calc(31.8% - 10px);
+            }
+        }   
     }
 
 
@@ -470,6 +544,43 @@ footer {
         }
         & > div:last-of-type > div{
             margin-right: 0px;
+        }
+    }
+
+    .project-page {
+        .text-col {
+            @include r_p_75();
+        }
+        .split-4 {
+            .row {
+                column-gap: 0;
+                max-width: 1240px;
+                & > div {
+                    width: calc(25% - 42px);
+                    @include r_mx_28();
+                    &:first-of-type {
+                        margin-left: 0;
+                    }
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        .project_header {
+            height: 680px;
+            .homelink {
+                height: 58px;
+            }
+            .title {
+                height: calc(680px - 58px - 58px);
+                margin: 0 0 58px;
+                h1 {
+                    font-size: 88px;
+                    line-height: 91px;
+                }
+            }
         }
     }
 

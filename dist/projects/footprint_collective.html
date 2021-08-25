@@ -32,63 +32,66 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="../css/global.css">
 
     <!-- Fonts! -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <title>Footprint Collective</title>
     <script src="https://kit.fontawesome.com/cc42d0d01b.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <main id="project_footprint_collective" class="profile-page"> <!-- Recreated from UXfolio in case I need it-->
-      <div >
+    <main id="project_footprint_collective" class="project-page"> <!-- Recreated from UXfolio in case I need it-->
+      <div>
+        
         <div class="content-container"><!-- Bio section at the top of the page -->
-          <section class="project_header container-fluid bg-dark text-white">
-            <div class="container">
-              <div class="row">
-                <div class="">
-                  <a>
-                    <div class="homelink">
+
+
+          <!-- PROJECT TITLE -->
+          <section class="project_header container-fluid">
+            <div class="row">
+              <div class="d-flex">
+                <div class="d-flex justify-content-start">
+                  <a href="../index.html">
+                    <div class="homelink flex-column">
                       <div>Randy Hembrador</div>
-                      <div>UX Designer</div>
+                      <div>UX designer</div>
                     </div>
                   </a>
                 </div>
-                <div class="title">
+                <div class="title d-lg-flex flex-lg-column justify-content-center">
                   <h1>Footprint Collective</h1>
-                </div>
-                <div class="subtitle">
                   <h2>Making sustainability more sustainable</h2>
                 </div>
               </div>
             </div>
           </section>
 
-          <section class="2-split container">
-              <div class="row">
-                  <div class="col-lg-6">
+
+          <!-- 2 SPLIT -->
+          <section class="background split-2 container-fluid">
+              <div class="row align-items-center">
+                  <div class="text-col col-lg-6">
                       <h3>Background</h3>
                       <p>Many want to help the environment, but few explicitly track and manage their personal carbon footprint regularly. Reasons for the discrepancy range from unfamiliarity with the concept to overwhelm from its complexity and potential pervasiveness.</p>
-                      <p>Objective</p>
-                      <p>Design a solution that helps users get familiar with their carbon footprint, and manage it in a way that’s sustainable in everyday life. </p>
+                      <p><strong>Objective</strong><br>
+                      Design a solution that helps users get familiar with their carbon footprint, and manage it in a way that’s sustainable in everyday life. </p>
                   </div>
-                  <div class="col-lg-6">
-                      <img src=".img/placeholder.png" alt="">
-                      <div class="text-center">Image via the Sierra Club</div>
+                  <div class="media-col col-lg-6">
+                      <div class="media-box text-center">
+                        <img src="./footprint_collective_img/bear.jpeg" alt="" class="img-fluid mx-auto">
+                        <div class="caption text-center"><a href="https://www.sierraclub.org/sierra/2015-4-july-august/ask-mr-green/hey-mr-green-what-should-my-carbon-footprint-goal-be" target="_blank">Image source: The Sierra Club</a></div>
+                      </div>
                   </div>
               </div>
           </section>
 
-          <section class="2-split container">
-            <div class="row flex-row-reverse">
-                <div class="col-lg-6">
+          <!-- 2 SPLIT -->
+          <section class="footprint split-2 container-fluid">
+            <div class="row flex-row-reverse align-items-center">
+                <div class="text-col col-lg-6">
                     <h3>Carbon Footprint</h3>
                     <p>Our project operated on the understanding that</p>
                     <ul>
@@ -97,124 +100,432 @@
                         <li>Lifestyle choices can be changed to reduce one's carbon footprint and overall negative impact on the environment</li>
                     </ul>
                 </div>
-                <div class="col-lg-6">
-                    <img src=".img/placeholder.png" alt="">
-                    <div class="text-center">Image source: co2living.com</div>
+                <div class="media-col col-lg-6">
+                    <div class="media-box text-center">
+                        <img src="./footprint_collective_img/footprint.jpeg" alt="" class="img-fluid mx-auto">
+                        <div class="caption text-center"><a href="https://co2living.com/reduce-your-carbon-footprint-7-instant-ways/" target="_blank">Image source: co2living.com</a></div>
+                    </div>
                 </div>
             </div>
           </section>
 
-          <section class="4-split container">
-              4 things
+
+          <!-- 4 SPLIT -->
+          <section class="breakdown split-4 container-fluid">
+                <div class="row">
+                    <div class="detail col-md-6 col-lg-3 text-center">
+                        <h3>Timeline</h3>
+                        <p>3-week group project</p>
+                    </div>
+                    <div class="detail col-md-6 col-lg-3 text-center">
+                        <h3>Project Scope</h3>
+                        <p>User research and analysis, 2 design sprints for onboarding UX, and initial prototype</p>
+                    </div>
+                    <div class="detail col-md-6 col-lg-3 text-center">
+                        <h3>Role</h3>
+                        <p>UX/Researcher, Research Analyst, UX Designer</p>
+                    </div>
+                    <div class="detail col-md-6 col-lg-3 text-center">
+                        <h3>Tools</h3>
+                        <p>Whimsical, Miro, Figma, Google Office</p>
+                    </div>
+                </div>
           </section>
 
-          <section class="header container-fluid bg-dark text-center">
-              Research
-          </section>
 
-          <section class="no-split container">
-
-          </section>
-
-          <section class="2-split container">
-              Interviews
-          </section>
-
-          <section class="quote container">
-              quote
-          </section>
-
-          <section class="2-split container">
-              findings 2
-          </section>
-
-          <section class="header container-fluid bg-dark text-center">
-              Definition and ideation
-          </section>
-
-          <section class="quote container">
-          </section>
-
-          <section class="2-split container">
-              competitive analysis
-          </section>
-
-          <section class="2-split container">
-              i like i wish what if
-          </section>
-
-          <section class="2-split container">
-              feature prioritization
-          </section>
-
-          <section class="2-split container">
-              user journey
-          </section>
-
-          <section class="header container-fluid bg-dark text-center">
-              prototyping
-          </section>
-
-          <section class="2-split container">
-              initial wireframes
-          </section>
-
-          <section class="2-split container">
-              lo-fi prototype
-          </section>
-
-          <section class="gallery container-fluid bg-dark text-center">
-              screens
-          </section>
-
-          <section class="header container-fluid bg-dark text-center">
-              testing and iterating
-          </section>
-
-          <section class="2-split container">
-              user testing
-          </section>
-
-          <section class="quote container">
-              a quote
-          </section>
-
-          <section class="2-split container">
-              2nd round iterations
-          </section>
-
-          <section class="gallery container-fluid bg-dark text-center">
-              gallery
+          <!-- SECTION HEADER -->
+          <section class="header container-fluid text-center">
+              <div class="h1">
+                  Research
+              </div>
           </section>
 
           <section class="no-split container">
-              results
+              <div class="row align-items-center">
+                  <div class="col-lg-7 mx-auto">
+                      <h3>Outset</h3>
+                      <p>Within our design team, all members considered themselves to be environmentally conscious, but no one regularly tracked and managed their own footprint.</p>
+                      <p>Our research plan sought to find if that was generally true, what might influence the choice to track, and how engagement might be increased.</p>
+                  </div>
+              </div>
           </section>
 
-          <section class="quote container-fluid bg-dark text-center">
-          </section>
 
-          <section class="header container-fluid bg-dark text-center">
-              final thoughts
-          </section>
-
-          <section class="2-split container">
-              next steps
-          </section>
-
-          <section class="no-split container">
-              learnings
+          <!-- 2 SPLIT; NO CAPTION -->
+          <section class="split-2 container-fluid">
+            <div class="row align-items-center">
+                <div class="text-col b_mw_720">
+                    <h3>Interviews and Surveys</h3>
+                    <p>To ask these questions, we conducted 5 interviews and a 25-person survey. Similar to our internal team, 92% of the respondents were either open or wanted to track their carbon footprint, <strong>but a staggering 0 actually did</strong>.</p>
+                    <p>Based on our findings, major causes appeared to be:</p>
+                    <ul>
+                        <li>Unfamiliarity with what’s possible</li>
+                        <li>A preference for lifestyle changes that don’t need to be tracked</li>
+                        <li>The sense that tracking can be overwhelming and/or intrusive</li>
+                    </ul>
+                </div>
+                <div class="media-col col-lg-6">
+                    <div class="media-box  text-center">
+                        <img src="./footprint_collective_img/research.png" alt="" class="img-fluid mx-auto">
+                        <div class="text-center"></div>
+                    </div>
+                </div>
+            </div>
           </section>
           
+
+          <!-- QUOTE -->
+          <section class="quote container-fluid text-center">
+              <div class="row">
+                  <div class="text-container mx-auto b_mw_900">
+                      <div class="h2">Text</div>
+                      <div class="author">Quote from research interview</div>
+                  </div>
+
+              </div>
+          </section>
+
+
+          <!-- 2 SPLIT -->
+          <section class="split-2 container-fluid">
+              <div class="row align-items-center">
+                  <div class="text-col col-lg-6">
+                      <p>And while no one tracked their carbon footprint, respondents had many other ways of expressing passionate conscientiousness from <strong>converting their homes to solar</strong> and <strong>attending environmental conferences</strong> to <strong>avoiding drive-thrus</strong> to reduce emissions.</p>
+
+                      <p>Our research indicated that the following were (or can be) powerful general motivators for adopting environmentally-friendly behavior:</p>
+                      <ul>
+                          <li>Information of <i>any</i>kind</li>
+                          <li>Knowledge of what others are doing</li>
+                          <li>Friendly competition</li>
+                      </ul>
+                  </div>
+                  <div class="media-col col-lg-6">
+                      <div class="media-box text-center">
+                        <img src="./footprint_collective_img/bear.jpeg" alt="" class="img-fluid mx-auto">
+                        <div class="caption text-center"><a href="https://www.sierraclub.org/sierra/2015-4-july-august/ask-mr-green/hey-mr-green-what-should-my-carbon-footprint-goal-be" target="_blank">Image source: The Sierra Club</a></div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+
+          <!-- SECTION HEADER -->
+          <section class="header container-fluid text-center">
+            <div class="h1">
+                Definition & Ideation
+            </div>
+          </section>
+
+
+          <!-- EMPATHY MAP -->
+          <section class="split-2 container-fluid text-r">
+              <div class="row align-items-center">
+                  <div class="text-col col-lg-6">
+                    <h3>Meet Greg</h3>
+                      <p>Based on our research, we developed an empathy map for a user named Greg with the thoughts, words, deeds, and feelings shown in the image.</p>
+
+                      <p>Pain points for Greg include the cost of footprint tracking - both monetary (such as the price of an electric car) as well as the effort to stay informed, consider the potential carbon impact of almost every action, and stay motivated to keep tracking and make changes.</p>
+                        
+                      <p>Our team aims to help Greg with the following...</p>
+                  </div>
+                  <div class="media-col col-lg-6">
+                      <div class="media-box text-center">
+                        <img src="./footprint_collective_img/bear.jpeg" alt="" class="img-fluid mx-auto">
+                        <div class="caption text-center"><a href="https://www.sierraclub.org/sierra/2015-4-july-august/ask-mr-green/hey-mr-green-what-should-my-carbon-footprint-goal-be" target="_blank">Image source: The Sierra Club</a></div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+          
+
+          <!-- PROBLEM STATEMENT -->
+          <section class="quote container-fluid text-center b_py_100">
+            <div class="row">
+                <div class="text-container mx-auto b_mw_900">
+                    <h4>Problem statement</h4>
+                    <div class="h3">Footprint Collective was created in order to provide environmentally conscious individuals a way to connect with others in their community, as well as to provide them with easy to access information in order to gain actionable awareness of their personal impact allowing them to make educated and sustainable changes.</div>
+                </div>
+            </div>
+          </section>
+
+
+          <!-- COMPETITIVE ANALYSIS -->
+          <section class="split-2 container-fluid text-l">
+              <div class="row align-items-center">
+                  <div class="text-col col-lg-6">
+                    <h3>Competitive Analysis</h3>
+                      <p>Currently, Greg does have access to some tools to help him with Carbon Footprint tracking. We considered the value he might gain from them as well as the challenges he might run into based on the motivators and deterrents identified in our research.</p>
+                      <p>Based on the analysis, we saw that the biggest potential areas for innovation were constant updates through passive data collection, socialized information exchange, and engagement through gamification.</p>
+                  </div>
+                  <div class="media-col col-lg-6">
+                      <div class="media-box text-center">
+                        <img src="./footprint_collective_img/bear.jpeg" alt="" class="img-fluid mx-auto">
+                        <div class="caption text-center"><a href="https://www.sierraclub.org/sierra/2015-4-july-august/ask-mr-green/hey-mr-green-what-should-my-carbon-footprint-goal-be" target="_blank">Image source: The Sierra Club</a></div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+
+          <!-- BRAINSTORM -->
+          <section class="split-2 container-fluid text-r">
+              <div class="row align-items-center">
+                  <div class="text-col col-lg-6">
+                    <h3>I Like, I Wish, What If...</h3>
+                    <p>Our team used the "I like, I wish, What if..." brainstorming method to determine the direction of our design solutions.</p>
+                    <p>Given the limited timeline and scope of the project, we decided to mainly focus on the "I Wish" portion of our results which generally fell into 3 categories</p>
+                    <ul>
+                        <li>Having accurate info to work with</li>
+                        <li>Reducing manual data entry as much as possible</li>
+                        <li>Having a steady stream of new information to work with</li>
+                    </ul>
+                  </div>
+                  <div class="media-col col-lg-6">
+                      <div class="media-box text-center">
+                        <img src="./footprint_collective_img/bear.jpeg" alt="" class="img-fluid mx-auto">
+                        <div class="caption text-center"><a href="https://www.sierraclub.org/sierra/2015-4-july-august/ask-mr-green/hey-mr-green-what-should-my-carbon-footprint-goal-be" target="_blank">Image source: The Sierra Club</a></div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+
+          <!-- FEATURE PRIORITIZATION -->
+          <section class="split-2 container-fluid text-r">
+              <div class="row align-items-center">
+                  <div class="text-col col-lg-6">
+                    <h3>Feature Prioritization</h3>
+                    <p>Identifying the highest priority work was also critical given the limited timeline and scope of the project.
+                    </p>
+                    <p>To accomplish this, we created a 2x2 complexity-to-impact matrix. Although several group members were highly passionate and excited about potential gamification aspects, we all ultimately aligned on data accuracy and simplification of data entry as the highest priority items.</p>
+                  </div>
+                  <div class="media-col col-lg-6">
+                      <div class="media-box text-center">
+                        <img src="./footprint_collective_img/bear.jpeg" alt="" class="img-fluid mx-auto">
+                        <div class="caption text-center"><a href="https://www.sierraclub.org/sierra/2015-4-july-august/ask-mr-green/hey-mr-green-what-should-my-carbon-footprint-goal-be" target="_blank">Image source: The Sierra Club</a></div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+
+          <!-- USER JOURNEY -->
+          <section class="split-2 container-fluid text-r">
+              <div class="row align-items-center">
+                  <div class="text-col col-lg-6">
+                    <h3>User Journey</h3>
+                    <p>Our team used the "I like, I wish, What if..." brainstorming method to determine the direction of our design solutions.</p>
+                    <p>Given the limited timeline and scope of the project, we decided to mainly focus on the "I Wish" portion of our results which generally fell into 3 categories</p>
+                    <ul>
+                        <li>Having accurate info to work with</li>
+                        <li>Reducing manual data entry as much as possible</li>
+                        <li>Having a steady stream of new information to work with</li>
+                    </ul>
+                  </div>
+                  <div class="media-col col-lg-6">
+                      <div class="media-box text-center">
+                        <img src="./footprint_collective_img/bear.jpeg" alt="" class="img-fluid mx-auto">
+                        <div class="caption text-center"><a href="https://www.sierraclub.org/sierra/2015-4-july-august/ask-mr-green/hey-mr-green-what-should-my-carbon-footprint-goal-be" target="_blank">Image source: The Sierra Club</a></div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+
+          <!-- SECTION HEADER -->
+          <section class="header container-fluid text-center">
+            <div class="h1">
+                Prototyping
+            </div>
+          </section>
+
+
+          <!-- TASK FLOW -->
+          <section class="split-2 container-fluid text-r">
+              <div class="row align-items-center">
+                  <div class="text-col col-lg-6">
+                    <h3>Plotting the Experience</h3>
+                    <p>To achieve our goal of simplifying data entry, we included several steps in the onboarding taskflow that would establish a foundation for passive data collection.</p>
+                    <p>These steps would let Greg connect the app to his local utility account and have the app track his commuting habits for him so that he can get accurate data with minimal need for manual data entry.</p>
+                    <ul>
+                        <li>Having accurate info to work with</li>
+                        <li>Reducing manual data entry as much as possible</li>
+                        <li>Having a steady stream of new information to work with</li>
+                    </ul>
+                  </div>
+                  <div class="media-col col-lg-6">
+                      <div class="media-box text-center">
+                        <img src="./footprint_collective_img/bear.jpeg" alt="" class="img-fluid mx-auto">
+                        <div class="caption text-center"><a href="https://www.sierraclub.org/sierra/2015-4-july-august/ask-mr-green/hey-mr-green-what-should-my-carbon-footprint-goal-be" target="_blank">Image source: The Sierra Club</a></div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+
+          <!-- TASK FLOW -->
+          <section class="split-2 container-fluid text-r">
+              <div class="row align-items-center">
+                  <div class="text-col col-lg-6">
+                    <h3>Plotting the Experience</h3>
+                    <p>To achieve our goal of simplifying data entry, we included several steps in the onboarding taskflow that would establish a foundation for passive data collection.</p>
+                    <p>These steps would let Greg connect the app to his local utility account and have the app track his commuting habits for him so that he can get accurate data with minimal need for manual data entry.</p>
+                    <ul>
+                        <li>Having accurate info to work with</li>
+                        <li>Reducing manual data entry as much as possible</li>
+                        <li>Having a steady stream of new information to work with</li>
+                    </ul>
+                  </div>
+                  <div class="media-col col-lg-6">
+                      <div class="media-box text-center">
+                        <img src="./footprint_collective_img/bear.jpeg" alt="" class="img-fluid mx-auto">
+                        <div class="caption text-center"><a href="https://www.sierraclub.org/sierra/2015-4-july-august/ask-mr-green/hey-mr-green-what-should-my-carbon-footprint-goal-be" target="_blank">Image source: The Sierra Club</a></div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+
+          <!-- LOW-FI -->
+          <section class="2-split container-fluid">
+            <div class="row align-items-center">
+                <div class="text-col col-lg-6">
+                    <h3>Low-Fi Prototype</h3>
+                    <p>We stitched together our low-fi wireframes in Figma to identify whether there were any unforeseen confusing elements in our design, and developed a test-plan based on the experience we hoped to provide for Greg.</p>
+                    <p>Our test plan for the prototype focused on</p>
+                    <ul>
+                        <li>X</li>
+                        <li>Y</li>
+                        <li>Z</li>
+                    </ul>
+                </div>
+                <div class="media-col col-lg-6">
+                    <div class="media-box text-center">
+                        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fc3kRV26VfxP2W1p0tLkCK2%2FGoal-Diggers%3Fkind%3D%26node-id%3D192%253A1%26page-id%3D192%253A0%26scaling%3Dscale-down%26viewport%3D29%252C357%252C0.09988998621702194" allowfullscreen></iframe>
+                      <div class="text-center">Image via the Sierra Club</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- MOCKUP GALLERY -->
+        <section class="mockups container-fluid b_py_100">
+          <div class="gallery w-100 h-100">
+            <div class="responsive-padding w-100 h-100">
+
+              <div class="row">
+
+                <div class="item-container col-6 col-md-4 text-center">
+                    <div class="gallery-item position-relative d-inline-block text-center">
+                        <div class="screen position-absolute top-0 start-50 text-center h-100">
+                            <div class="scrolling-content position-relative w-100 h-100 d-block">
+                                <img src="./footprint_collective_img/mockup/summary.png" alt="Screen design displayed in a mockup" width="752" class="mw-100 h-auto">
+                            </div>
+                        </div>
+                        <div class="frame position-relative pe-none d-block mx-auto">
+                            <img src="../img/mockup--mobile--semi-realistic--light--no-notch.svg" class="mw-100 mh-auto d-block">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-container col-6 col-md-4 text-center">
+                    <div class="gallery-item position-relative d-inline-block text-center">
+                        <div class="screen position-absolute top-0 start-50 text-center h-100">
+                            <div class="scrolling-content position-relative w-100 h-100 d-block">
+                                <img src="./footprint_collective_img/mockup/summary.png" alt="Screen design displayed in a mockup" width="752" class="mw-100 h-auto">
+                            </div>
+                        </div>
+                        <div class="frame position-relative pe-none d-block mx-auto">
+                            <img src="../img/mockup--mobile--semi-realistic--light--no-notch.svg" class="mw-100 mh-auto d-block">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-container col-6 col-md-4 text-center">
+                    <div class="gallery-item position-relative d-inline-block text-center">
+                        <div class="screen position-absolute top-0 start-50 text-center h-100">
+                            <div class="scrolling-content position-relative w-100 h-100 d-block">
+                                <img src="./footprint_collective_img/mockup/summary.png" alt="Screen design displayed in a mockup" width="752" class="mw-100 h-auto">
+                            </div>
+                        </div>
+                        <div class="frame position-relative pe-none d-block mx-auto">
+                            <img src="../img/mockup--mobile--semi-realistic--light--no-notch.svg" class="mw-100 mh-auto d-block">
+                        </div>
+                    </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+
+        <!-- SECTION HEADER -->
+        <section class="header container-fluid text-center">
+          <div class="h1">
+              Testing & Iterating
+          </div>
+        </section>
+
+
+        <!-- NO SPLIT -->
+        <section class="split-2 container-fluid">
+          <div class="row align-items-center">
+              <div class="text-col col-lg-6 mx-auto">
+                  <h3>Next Steps</h3>
+                  <p>If we were to take the project further, we'd next focus on the following...</p>
+                  <ul>
+                      <li>Perform further design iterations on the quiz functionality to improve clarity and data quality</li>
+                      <li>Improve clarity for the flows used to build out the user’s contact list</li>
+                      <li>Begin to design functionality for how users connect and interact with each other through the app</li>
+                  </ul>
+              </div>
+              <div class="text-col col-lg-6 mx-auto">
+                  <p>...from there, our next design focus would be how we collect the missing data points, like food servings and airplane travel</p>
+                  <p>And from there, we’d have the data foundation to really start delivering on the promise of the app, and start designing the features around personalized recommendations, building groups, and engaging in community challenges with a sustainability impact</p>
+              </div>
+          </div>
+        </section>
+
         </div>
       </div>
+
+      <div class="scroll-to-top"></div>
         
-      <!-- Footer -->
-      <footer class="container-fluid border-top text-center">
-        <div class="row">
-          <div class="content col-12">
-            <a href="https://www.linkedin.com/in/randy-hembrador/" target="blank">LinkedIn</a>
-          </div>
+      <!-- FOOTER -->
+      <footer class="project-footer">
+        <div class="container-fluid text-center i_py_40">
+            <div class="row">
+              <div class="content col-12 d-flex justify-content-center">
+                <div class="project-owner justify-content-start">
+                    <div class="owner">
+                      <div class="owner-info text-start b_mb_24">
+                        <div class="owner-name">Randy Hembrador</div>
+                        <div class="owner-company">UX designer</div>
+                      </div>
+                    </div>
+                    <div class="footer-links">
+                      <a href="../contact.html" class="footer-btn">Contact</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-dark d-flex align-items-center text-white">
+            <div class="project-footer-icons text-center d-flex align-items-center justify-content-center justify-content-lg-end mx-auto i_py_30">
+                Share this on
+                <a href="https://www.facebook.com/sharer.php?u=https://uxfol.io/project/0324c9ec" target="_blank" class="facebook d-inline-flex">
+                    <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+                </a>
+                <a href="https://twitter.com/share?url=https://uxfol.io/project/0324c9ec" target="_blank" class="twitter d-inline-flex">
+                    <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+                </a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://uxfol.io/project/0324c9ec" target="_blank" class="linkedin d-inline-flex">
+                    <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
+                </a>
+            </div>
         </div>
       </footer>
 

@@ -46,6 +46,16 @@ section {
 .no-split, .split-3, .split-4{
     @include r_px_24();
 }
+.split-4 {
+    .row {
+        & > div {
+            p:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
 .text-col {
     @include r_py_50();
     @include r_px_24();
@@ -55,6 +65,7 @@ section {
         width: 100%;
         height: auto;
         aspect-ratio: 3 /2;
+        min-height: 25vh;
     }
 }
 .caption {
@@ -69,6 +80,9 @@ section {
     @include r_px_0();
     .row {
         @include r_px_24();
+        & > div {
+            flex-direction: column;
+        }
     }
     .homelink {
         color: white;
@@ -83,7 +97,7 @@ section {
     background-size: cover;
     background-position: 50%;
     .title {
-        margin: 60px auto 100px;
+        margin: 60px 0 100px;
         h1 {
             font-size: 35px;
             line-height: 1;
@@ -178,6 +192,34 @@ section {
     }  
 }
 
+.scroll-to-top {
+    background-color: rgba(40,42,43,.1);
+    border-radius: 50%;
+    bottom: -64px;
+    //cursor: pointer;
+    display: none;
+    float: right;
+    height: 32px;
+    //margin: -108px 20px 0 0;
+    //position: -webkit-sticky;
+    //position: sticky;
+    position: fixed;
+    right: 24px;
+    transition: all .2s ease-in-out;
+    width: 32px;
+    &:before{
+        background: url(../img/icon-left.svg) 50% no-repeat;
+        background-size: 16px 16px;
+        content: "";
+        display: block;
+        height: 32px;
+        transform: rotate(90deg);
+        width: 32px;
+    }
+    &:hover {
+        background-color: rgba(40,42,43,.25);
+    }
+}
 
 .project-footer {
     background-color: $footer-bg;
@@ -216,7 +258,9 @@ section {
         color: $ll-gray;
         font-size: 14px;
         line-height: 36px;
-        justify-content: flex-end;
+        width: 1440px;
+        max-width: 100%;
+        @include r_px_24();
         a {
             width: 28px;
             height: 28px;
