@@ -328,6 +328,11 @@ footer a {
   /* -------------------- Links Buttons and Inputs -------------------- */
   /* -------------------- Generic Module Components -------------------- */
   /* -------------------- Specific Modules -------------------- */
+  /* -------------------- Variable  -------------------- */
+  /* -------------------- Variable  -------------------- */
+  /* -------------------- Margins -------------------- */
+  /* -------------------- Padding -------------------- */
+  /* -------------------- Other -------------------- */
 }
 
 .project-page > div {
@@ -685,6 +690,211 @@ footer a {
   width: 14px;
   height: 14px;
   display: block;
+}
+
+.imported-project-page {
+  /* -------------------- Variable  -------------------- */
+  /* -------------------- Variable  -------------------- */
+  /* -------------------- Margins -------------------- */
+  /* -------------------- Padding -------------------- */
+  /* -------------------- Other -------------------- */
+  /* -------------------- Variable  -------------------- */
+  /* -------------------- Variable  -------------------- */
+  /* -------------------- Margins -------------------- */
+  /* -------------------- Padding -------------------- */
+  /* -------------------- Other -------------------- */
+}
+
+.imported-project-page .project_header {
+  background-color: rgba(241, 243, 244, 0.949);
+  border-bottom: 1pt solid white;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.imported-project-page .project_header .row {
+  max-width: inherit;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.imported-project-page .project_header .row > div {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.imported-project-page .project_header .homelink {
+  color: #373839;
+  font-family: "Source Sans Pro", serif;
+  font-size: .75rem;
+  padding-top: 15px;
+}
+
+.imported-project-page .project_header .homelink div:nth-of-type(2) {
+  font-size: .625rem;
+  font-style: italic;
+}
+
+.imported-project-page .project_header .title {
+  margin: 30px 0 40px;
+}
+
+.imported-project-page .project_header .title h1 {
+  color: #353738;
+  font-family: "Source Sans Pro", serif;
+  font-size: 35px;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.imported-project-page .project_header .title h2 {
+  color: #81868A;
+  font-size: inherit;
+  line-height: 18px;
+}
+
+.imported-project-page .project_header .title p {
+  line-height: 1.5;
+  margin: 8px 0 0;
+}
+
+.imported-project-page > div {
+  margin-bottom: 0 !important;
+}
+
+.imported-project-page .frame-holder div {
+  height: 100%;
+}
+
+.imported-project-page .frame-holder iframe {
+  min-height: 85vh;
+  margin-bottom: -6px;
+}
+
+.imported-project-page .frame-holder .punch-viewer-body {
+  background-color: #161616;
+}
+
+.imported-project-page .frame-holder .punch-viewer-navbar {
+  padding-left: 24px;
+}
+
+.imported-project-page .project-footer {
+  background-color: #f3f7f8;
+  color: #353738;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+}
+
+.imported-project-page .project-footer .row {
+  margin-bottom: 16px;
+}
+
+.imported-project-page .project-footer .owner-info div:nth-of-type(1) {
+  font-weight: 700;
+  line-height: 1;
+}
+
+.imported-project-page .project-footer .owner-info div:nth-of-type(2) {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.imported-project-page .project-footer .footer-links {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.imported-project-page .project-footer .footer-links .footer-btn {
+  background-color: white;
+  border-radius: 18px;
+  color: #778390;
+  font-family: "Source Sans Pro", serif;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px 16px;
+  text-transform: uppercase;
+}
+
+.imported-project-page .project-footer .project-footer-icons {
+  color: #d8d8d8;
+  font-size: 14px;
+  line-height: 36px;
+  width: 1440px;
+  max-width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.imported-project-page .project-footer .project-footer-icons a {
+  width: 28px;
+  height: 28px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  margin: 0 5px;
+  -webkit-transition: linear .1s;
+  transition: linear .1s;
+}
+
+.imported-project-page .project-footer .project-footer-icons a svg {
+  fill: white;
+}
+
+.imported-project-page .project-footer .project-footer-icons a.facebook {
+  background-color: #3b5998;
+  border-color: #3b5998;
+  margin-left: 24px;
+}
+
+.imported-project-page .project-footer .project-footer-icons a.facebook:hover svg {
+  fill: #3b5998;
+}
+
+.imported-project-page .project-footer .project-footer-icons a.twitter {
+  background-color: #55acee;
+  border-color: #55acee;
+}
+
+.imported-project-page .project-footer .project-footer-icons a.twitter:hover svg {
+  fill: #55acee;
+}
+
+.imported-project-page .project-footer .project-footer-icons a.linkedin {
+  background-color: #0976b4;
+  border-color: #0976b4;
+}
+
+.imported-project-page .project-footer .project-footer-icons a.linkedin:hover svg {
+  fill: #0976b4;
+}
+
+.imported-project-page .project-footer .project-footer-icons a:hover {
+  background-color: white;
+  border-color: white;
+}
+
+.imported-project-page .project-footer .project-footer-icons svg {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+.imported-project-page .project-footer {
+  background-color: #f3f7f8;
+  color: #353738;
 }
 
 /* -------------------- Specific Page Styles  -------------------- */

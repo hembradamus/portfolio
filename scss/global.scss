@@ -216,6 +216,10 @@ footer {
     @import "_baseline-project_template";
 }
 
+//Project Pages
+.imported-project-page {
+    @import "_baseline-imported_project_template";
+}
 
 /* -------------------- Specific Page Styles  -------------------- */
 @import "_baseline-specific_pages";

@@ -22,6 +22,17 @@
 
       gtag('config', 'G-SWDKFNYGJ6');
     </script>
+    
+    <!-- ReCATCHPA -->
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Ldg_SYcAAAAAGMDym3bAwDzVcVWg_xMo_78pn00"></script>
+    <script>
+      grecaptcha.enterprise.ready(function() {
+        grecaptcha.enterprise.execute('6Ldg_SYcAAAAAGMDym3bAwDzVcVWg_xMo_78pn00', {action: 'login'})
+        .then(function(token) {
+            document.getElementById('captchaResponse').value = token;
+        });
+      });
+    </script>
 
     <!--Page template using bootstrap 5: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
     <!-- Required meta tags -->
@@ -62,9 +73,9 @@
           <!-- Contact form -->
           <section class="contact-form container-fluid">
               <div class="row justify-content-center no-split">
-                <form name="contact_form_section" class="col-md-10 col-lg-6 mx-auto">
+                <form action ="https://getform.io/f/b2e6bedd-08ec-4e2f-8585-099af9a0f919" method="POST" class="col-md-10 col-lg-6 mx-auto">
                     <div class="title h4">Dear Randy Hembrador,</div>
-                    <input type="hidden" name="toEmail" value="randy.hembrador@gmail.com">
+                    <!--input type="hidden" name="toEmail" value="randy.hembrador@gmail.com"-->
                     <textarea name="message" type="text" class="form-handler w-100" required="" placeholder="Write your message here…" spellcheck="false"></textarea>
                     
                     <div class="subtitle h4">Best,</div>
@@ -75,6 +86,7 @@
                       <input class="s-mail form-handler w-100" name="senderEmail" type="text" required="" placeholder="Your email">
                     </div>
                     <div class="float-end text-end">
+                      <input type="hidden" id="captchaResponse" name="g-recaptcha-response">
                       <button class="submit" type="submit">Send email</button>
                       <div>
                         or find me at <a href="mailto:randy.hembrador@gmail.com">randy.hembrador@gmail.com</a>
@@ -100,5 +112,6 @@
 
     <!-- Scripts Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
   </body>
 </html>

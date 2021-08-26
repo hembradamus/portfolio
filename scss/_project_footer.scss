@@ -1,0 +1,94 @@
+@import "_variables";
+@import "_mixins";
+
+.project-footer {
+    background-color: $footer-bg;
+    color: $body-color-2;
+    font-family: $btn-font;
+    font-size: 18px;
+    .row {
+        margin-bottom: 16px;
+    }
+    .owner-info {
+        div:nth-of-type(1) {
+            font-weight: 700;
+            line-height: 1;
+        }
+        div:nth-of-type(2) {
+            font-size: 14px;
+            font-style: italic;
+            line-height: 1.5;
+        }
+    }
+    .footer-links {
+        @include r_my_24();
+        .footer-btn {
+            background-color: white;
+            //border: 1pt solid $border-color;
+            border-radius: 18px;
+            color: $l-gray;
+            font-family: $h-font-2;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 10px 16px;
+            text-transform: uppercase;
+        }
+    }
+    .project-footer-icons {
+        color: $ll-gray;
+        font-size: 14px;
+        line-height: 36px;
+        width: 1440px;
+        max-width: 100%;
+        @include r_px_24();
+        a {
+            width: 28px;
+            height: 28px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            margin: 0 5px;
+            transition: linear .1s;
+            svg {
+                fill: white;
+            }
+            &.facebook { 
+                background-color: $facebook;
+                border-color: $facebook;
+                margin-left: 24px;
+                &:hover {
+                    svg {
+                        fill: $facebook;
+                    }
+                }
+            }
+            &.twitter {
+                background-color: $twitter;
+                border-color: $twitter;
+                &:hover {
+                    svg {
+                        fill: $twitter;
+                    }
+                }
+            }
+            &.linkedin {
+                background-color: $linkedin;
+                border-color: $linkedin;
+                &:hover {
+                    svg {
+                        fill: $linkedin;
+                    }
+                }
+            }
+            &:hover {
+                background-color: white;
+                border-color: white;
+            }
+        }
+        svg {
+            width: 14px;
+            height: 14px;
+            display: block;        
+        }
+    }
+}

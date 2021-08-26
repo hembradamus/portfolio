@@ -1,0 +1,77 @@
+@import "_variables";
+@import "_mixins";
+
+.project_header {
+    background-color: rgba(241,243,244,0.949);
+    border-bottom: 1pt solid white;
+    margin-bottom: 0;
+    @include r_py_0();
+    @include r_px_0();
+    .row {
+        max-width: inherit;
+        @include r_px_24();
+        & > div {
+            flex-direction: column;
+        }
+    }
+    .homelink {
+        color: $footer-color;
+        font-family: $h-font-2;
+        font-size: .75rem;
+        padding-top: 15px;
+        div:nth-of-type(2) {
+            font-size: .625rem;
+            font-style: italic;
+        }
+    }
+    background-size: cover;
+    background-position: 50%;
+    .title {
+        margin: 30px 0 40px;
+        h1 {
+            color:rgb(53,55,56);
+            font-family: $h-font-2;
+            font-size: 35px;
+            line-height: 1;
+            margin-bottom: 0;
+        }
+        h2 {
+            color: #81868A;
+            font-size: inherit;
+            line-height: 18px;
+        }
+        p {
+            line-height: 1.5;
+            margin: 8px 0 0;
+        }
+    }
+}
+
+
+& > div {
+    margin-bottom: 0 !important;
+}
+.frame-holder {
+    & div {
+        height: 100%;
+    }
+    iframe {
+        min-height: 85vh;
+        margin-bottom: -6px;
+    }
+    .punch-viewer-body{
+        background-color: #161616;
+    }
+    .punch-viewer-navbar {
+        padding-left: 24px;
+    }
+}
+
+
+@import "_project_footer";
+
+
+.project-footer {
+    background-color: $footer-bg;
+    color: $body-color-2;
+}
