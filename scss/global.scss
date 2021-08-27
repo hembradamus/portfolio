@@ -454,6 +454,14 @@ footer {
         }   
     }
 
+    .imported-project-page {
+        .frame-holder {
+            iframe {
+                min-height: 85vh;
+            }
+        }
+    }
+
 
     //md profile styles
     #profile {

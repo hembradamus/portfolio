@@ -774,7 +774,7 @@ footer a {
 }
 
 .imported-project-page .frame-holder iframe {
-  min-height: 85vh;
+  min-height: 60vh;
   margin-bottom: -6px;
 }
 
@@ -1255,6 +1255,9 @@ footer a {
   }
   .project-page .gallery .col-6 {
     width: calc(31.8% - 10px);
+  }
+  .imported-project-page .frame-holder iframe {
+    min-height: 85vh;
   }
   #profile .content-container {
     padding-left: 0;
