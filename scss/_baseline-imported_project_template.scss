@@ -1,5 +1,25 @@
 @import "_variables";
 @import "_mixins";
+& > div {
+    margin-bottom: 0 !important;
+    overflow-x: clip;
+
+    .opacity-0 {
+        opacity: 0;
+    }
+    .spinner-border {
+        transition: opacity linear .2s;
+    }
+
+    .scroll_btn {
+        margin-top: calc(210px - 32px - 12px);
+        position: relative;
+        right: 2.5vw;
+        &:hover {
+            margin-top: calc(210px - 32px - 16px);
+        }
+    }
+}
 
 .project_header {
     background-color: rgba(241,243,244,0.949);
@@ -7,6 +27,12 @@
     margin-bottom: 0;
     @include r_py_0();
     @include r_px_0();
+    a {
+        color: $black;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
     .row {
         max-width: inherit;
         @include r_px_24();
@@ -47,23 +73,21 @@
     }
 }
 
-
-& > div {
-    margin-bottom: 0 !important;
-}
 .frame-holder {
+    background-color: $dd-gray;
     & div {
-        height: 100%;
+        transition: opacity linear .2s;
     }
     iframe {
-        min-height: 60vh;
-        margin-bottom: -6px;
+        min-height: 50vh;
+        margin-bottom: -7px;
     }
-    .punch-viewer-body{
-        background-color: #161616;
-    }
-    .punch-viewer-navbar {
-        padding-left: 24px;
+    .badge-hide {
+        background: #E5E6E6;
+        height: 30px;
+        margin-bottom: 3px;
+        transition: opacity linear .2s;
+        width: 130px;
     }
 }
 

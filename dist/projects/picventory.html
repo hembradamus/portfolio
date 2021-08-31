@@ -1,17 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta name="title" property="og:title" content="Picventory">
-    <meta property="og:type" content="Portfolio Project">
-    <meta name="image" property="og:image" content="https://randyhembrador.com/projects/footprint_collective_img/bear.jpeg">
-    <meta name="description" property="og:description" content="UX  Case Study for an image-recognition product scanner concept">
-    <meta name="author" content="Randy Hembrador">
-
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@flickr" />
-    <meta name="twitter:title" content="Picventory" />
-    <meta name="twitter:description" content="UX  Case Study for an image-recognition product scanner concept" />
-    <meta name="twitter:image" content="https://randyhembrador.com/projects/footprint_collective_img/bear.jpeg" />
     <!-- Hotjar Tracking Code for https://hembradamus.github.io/portfolio/dist/index.html -->
     <script>
       (function(h,o,t,j,a,r){
@@ -34,10 +23,31 @@
       gtag('config', 'G-SWDKFNYGJ6');
     </script>
 
+
+    <meta name="title" property="og:title" content="Picventory">
+    <meta property="og:type" content="Portfolio Project">
+    <meta name="image" property="og:image" content="https://randyhembrador.com/projects/footprint_collective_img/bear.jpeg">
+    <meta name="description" property="og:description" content="UX  Case Study for an image-recognition product scanner concept">
+    <meta name="author" content="Randy Hembrador">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@flickr" />
+    <meta name="twitter:title" content="Picventory" />
+    <meta name="twitter:description" content="UX  Case Study for an image-recognition product scanner concept" />
+    <meta name="twitter:image" content="https://randyhembrador.com/projects/footprint_collective_img/bear.jpeg" />
+
     <!--Page template using bootstrap 5: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" href="../img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="../img/favicons/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../img/favicons/favicon.ico">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -53,7 +63,7 @@
     <title>Picventory</title>
     <script src="https://kit.fontawesome.com/cc42d0d01b.js" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body class="bg-dark">
     <main id="project_picventory" class="imported-project-page"> <!-- Recreated from UXfolio in case I need it-->
       <div>
         
@@ -73,18 +83,38 @@
                   </a>
                 </div>
                 <div class="title d-lg-flex flex-lg-column justify-content-center">
-                  <h1>Case Study: Picventory</h1>
-                  <p>This case study is presented via Google Slides. Click the presentation or controls beneath it to proceed.</p>
+                  <h1>Picventory</h1>
+                  <p>This case study is presented via Google Slides.                  
+                    <a href="https://docs.google.com/presentation/d/e/2PACX-1vQ-_Qo7goM8bsJwWDcKPqle1V-0I7qenStZwJcts8D3Q6W69s_ZtBH2mmXYW6E91A7_pcztBo4GzpK9/pub?start=false&loop=false&delayms=3000" target="_blank">Click here</a> to view in its own tab.</p>
                 </div>
               </div>
             </div>
           </section>
 
-          <section class="frame-holder">
-              <div class="mx-auto">
-                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ-_Qo7goM8bsJwWDcKPqle1V-0I7qenStZwJcts8D3Q6W69s_ZtBH2mmXYW6E91A7_pcztBo4GzpK9/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+          <section class="frame-holder position-relative">
+            <div class="loading d-flex flex-column text-primary position-absolute top-50 start-50 translate-middle align-items-center justify-items-center">
+              <div class="spinner-border text-secondary opacity-100" role="status">
+                <span class="visually-hidden">Loading...</span>
               </div>
+              <p class="text-center text-secondary m-3">Loading from Google Slides</p>
+
+            </div>
+            <div class="badge-hide position-absolute bottom-0 end-0 opacity-0" msg="Sorry Google! Realize this element is bad form, though it seemed a little confusing that the badge led to the Google Slides homepage. Perhaps it should either lead to the presentation in Slides, or have hover text that says clicking the link will send user to the Google Slides homepage?"></div>
+
+            <div class="mx-auto opacity-0">
+              <div class="toast align-items-center border-0 position-absolute top-0 start-50 translate-middle-x h-auto" data-bs-autohide="false" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex"> 
+                  <div class="toast-body">Presentation controls appear beneath the viewport
+                  </div>
+                  <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+              </div>
+              <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ-_Qo7goM8bsJwWDcKPqle1V-0I7qenStZwJcts8D3Q6W69s_ZtBH2mmXYW6E91A7_pcztBo4GzpK9/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            </div>
           </section>
+
+
+          <div class="scroll_btn" onclick="topFunction()"></div>
 
         </div>
       </div>
@@ -98,10 +128,12 @@
               <div class="content col-12 d-flex justify-content-center">
                 <div class="project-owner justify-content-start">
                     <div class="owner">
-                      <div class="owner-info text-start b_mb_24">
-                        <div class="owner-name">Randy Hembrador</div>
-                        <div class="owner-company">UX designer</div>
-                      </div>
+                      <a href="../index.html">
+                        <div class="owner-info text-start b_mb_24">
+                          <div class="owner-name">Randy Hembrador</div>
+                          <div class="owner-company">UX designer</div>
+                        </div>
+                      </a>
                     </div>
                     <div class="footer-links">
                       <a href="../contact.html" class="footer-btn">Contact</a>
@@ -130,5 +162,7 @@
 
     <!-- Scripts Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="../js/scripts.js"></script>
   </body>
 </html>

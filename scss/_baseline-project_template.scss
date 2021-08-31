@@ -7,6 +7,7 @@
 & > div {
     color: $body-color-2;
     line-height: 1.5;
+    overflow-x: clip;
     h1,.h1,
     .quote h2,
     h3,.h3,
@@ -31,6 +32,17 @@
 /* -------------------- Links Buttons and Inputs -------------------- */
 a {
     color: $body-color-2;
+}
+
+.scroll_btn {
+    margin-bottom: -70px;
+    position: sticky;
+    top: 90vh;
+    right: 2.5vw;
+    &:hover {
+        margin-bottom: calc(-70px + 8px);
+        top: calc(90vh - 12px);
+    }
 }
 
 /* -------------------- Generic Module Components -------------------- */
@@ -190,35 +202,6 @@ section {
             border-radius: 31px;
         }
     }  
-}
-
-.scroll-to-top {
-    background-color: rgba(40,42,43,.1);
-    border-radius: 50%;
-    bottom: -64px;
-    //cursor: pointer;
-    display: none;
-    float: right;
-    height: 32px;
-    //margin: -108px 20px 0 0;
-    //position: -webkit-sticky;
-    //position: sticky;
-    position: fixed;
-    right: 24px;
-    transition: all .2s ease-in-out;
-    width: 32px;
-    &:before{
-        background: url(../img/icon-left.svg) 50% no-repeat;
-        background-size: 16px 16px;
-        content: "";
-        display: block;
-        height: 32px;
-        transform: rotate(90deg);
-        width: 32px;
-    }
-    &:hover {
-        background-color: rgba(40,42,43,.25);
-    }
 }
 
 @import "_project_footer";
