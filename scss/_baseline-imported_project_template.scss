@@ -10,15 +10,6 @@
     .spinner-border {
         transition: opacity linear .2s;
     }
-
-    .scroll_btn {
-        margin-top: calc(210px - 32px - 12px);
-        position: relative;
-        right: 2.5vw;
-        &:hover {
-            margin-top: calc(210px - 32px - 16px);
-        }
-    }
 }
 
 .project_header {

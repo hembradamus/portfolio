@@ -226,3 +226,10 @@
         @include mx_auto();
     }
 }
+
+@mixin s_btn_hover {
+    &:hover {
+        margin-bottom: 5px;
+        opacity: 1;
+    }
+}

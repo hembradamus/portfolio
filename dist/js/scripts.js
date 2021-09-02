@@ -1,3 +1,7 @@
+const vh = window.innerHeight / 100;
+
+
+// Calls
 window.onload = (event) => {
     let myAlert = document.querySelector('.toast');
     let bsAlert = new bootstrap.Toast(myAlert);
@@ -5,27 +9,42 @@ window.onload = (event) => {
     console.log('mmmm-hmmmmm');
 }
 
-document.querySelector("iframe").onload = function() {myFunction()};
+document.querySelector("iframe").onload = function() {
+    classFromClass('opacity-0','opacity-0')
+    classToClass('opacity-0','loading');
+};
 
-function myFunction() {
-  Array.from(document.getElementsByClassName("opacity-0"))
-  .forEach((element) => element.classList.remove('opacity-0'));
-  Array.from(document.getElementsByClassName("loading"))
-  .forEach((element) => element.classList.add('opacity-0'));
+//Helpers
+function classFromClass(target_class, class_selection) {
+    Array.from(document.getElementsByClassName(class_selection))
+    .forEach((element) => element.classList.remove(target_class));
+}
+function classToClass(new_class, class_selection) {
+    Array.from(document.getElementsByClassName(class_selection))
+    .forEach((element) => element.classList.add(new_class));
 }
 
-//Get the button:
-mybutton = document.getElementById("scoll_btn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+//"Sometimes sticky" Scroll to Top button
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+    //Would like to clean this up at some point to improve how the sticky point is determined detect for where the target element would otherwise normall appear in the DOM
+    let mybutton = document.getElementById('scroll_btn');
+    let btn_h = mybutton.getBoundingClientRect().height;
+    let doc_h = document.querySelector("body").getBoundingClientRect().height;
+    let window_h = window.innerHeight;
+    let footer_h = document.querySelector('footer').getBoundingClientRect().height;
+    let sticky_start = doc_h - window_h - footer_h - btn_h;
+
+    if (document.documentElement.scrollTop < sticky_start) {
+        mybutton.classList.add('active_scroll');
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+            mybutton.classList.add('onscreen');
+        } else {
+            mybutton.classList.remove('onscreen');
+        }
+    } else {
+        mybutton.classList.remove('active_scroll');
+    }
 }
 
 // When the user clicks on the button, scroll to the top of the document

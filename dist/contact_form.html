@@ -63,37 +63,22 @@
   </head>
   <body>
     <main id="contact" class="profile-page"> <!-- Recreated from UXfolio in case I need it-->
-      <div>        
-        <div class="content-container">
-
-          <!-- Page header -->
-          <section class="page-head container-fluid">        
-              <div class="col-12">
-                  <div class="header">
-                    <div>
-                      <h1>Contact Me</h1>
-                      <div class="back"><a href="#" onclick="goBack()">⟵ Back</a></div>                
-                    </div> 
-                  </div>
-              </div>
-          </section>
 
           <!-- Contact form -->
           <section class="contact-form container-fluid">
               <div class="row justify-content-center no-split">
                 <form action ="https://getform.io/f/b2e6bedd-08ec-4e2f-8585-099af9a0f919" method="POST" class="col-md-10 col-lg-6 mx-auto">
-                    <div class="title h4">Dear Randy Hembrador,</div>
                     <!--input type="hidden" name="toEmail" value="randy.hembrador@gmail.com"-->
-                    <textarea name="message" type="text" class="form-handler w-100" required="" placeholder="Write your message here…" spellcheck="false"></textarea>
+                    <textarea name="message" type="text" class="form-handler w-100" style="max-height: 40vh;" required="" placeholder="Write your message here…" spellcheck="false"></textarea>
                     
-                    <div class="subtitle h4">Best,</div>
+                    <div class="subtitle h4 d-none">Best,</div>
                     <div class="sender-name">
                       <input class="s-name form-handler w-100" name="senderName" type="text" required="" placeholder="Your name" >
                     </div>
                     <div class="sender-email">
                       <input class="s-mail form-handler w-100" name="senderEmail" type="text" required="" placeholder="Your email">
                     </div>
-                    <div class="float-end text-end">
+                    <div class="float-start text-start">
                       <input type="hidden" id="captchaResponse" name="g-recaptcha-response">
                       <button class="submit" type="submit">Send email</button>
                       <div>
@@ -104,26 +89,14 @@
               </div>
           </section>
 
-        </div><!-- End content-container-->
-      </div><!-- End page-->
-  
-      <!-- Footer -->
-      <footer class="page-footer container-fluid border-top text-center">
-        <div class="row h-100 d-flex align-items-center b_mw_1110">
-          <div class="content col-12">
-            <a href="https://www.linkedin.com/in/randy-hembrador/" target="blank" class="text-decoration-none text-uppercase">LinkedIn</a>
-          </div>
-        </div>
-      </footer>
-
     </main>
 
     <!-- Scripts Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
     <script>
-      function goBack() {
-        window.history.back();
+      window.onload = (event) => {
+          let form = document.querySelector('form').reset();
+          console.log('diddit');
       }
     </script>
 

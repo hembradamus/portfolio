@@ -2,7 +2,6 @@
 @import "_mixins";
 
 
-
 /* -------------------- Text  -------------------- */
 & > div {
     color: $body-color-2;
@@ -34,16 +33,6 @@ a {
     color: $body-color-2;
 }
 
-.scroll_btn {
-    margin-bottom: -70px;
-    position: sticky;
-    top: 90vh;
-    right: 2.5vw;
-    &:hover {
-        margin-bottom: calc(-70px + 8px);
-        top: calc(90vh - 12px);
-    }
-}
 
 /* -------------------- Generic Module Components -------------------- */
 section {
@@ -87,6 +76,7 @@ section {
 
 /* -------------------- Specific Modules -------------------- */
 .project_header {
+    background-color: gray;
     margin-bottom: 0;
     @include r_py_0();
     @include r_px_0();

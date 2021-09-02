@@ -61,9 +61,17 @@
         }
     }
 }
-.colorize-navy {
-    filter: brightness(0.2) sepia(1) hue-rotate(180deg) saturate(5);
-  }
+
+.modal-dialog {
+    max-width: 720px !important;
+    .modal-body {
+        padding: 0;
+    }
+    iframe {
+        height: 79vh;
+        max-height: 704px;
+    }
+}
 
 /*.ratio>img {
     height: initial;
@@ -179,25 +187,33 @@ textarea {
 }
 
 
-.scroll_btn {
+#scroll_btn {
     background-color: rgba(40,42,43,.2);
     border-radius: 50%;
     float: right;
-    height: 32px;
+    height: $s_btn_w_h;
+    margin-top: -100px;
+    margin-right: $s_btn_right;
     opacity: .5;
+    right: 0;
     transition: all .2s ease-in-out;
-    width: 32px;
+    width: $s_btn_w_h;
     &:before{
         background: url(../img/icon-left.svg) 50% no-repeat;
-        background-size: 16px 16px;
+        background-size: $s_btn_bg $s_btn_bg;
         content: "";
         display: block;
         height: 100%;
         transform: rotate(90deg);
         width: 100%;
     }
-    &:hover {
-        opacity: 1;
+    &.active_scroll {
+        bottom: 0 - $s_btn_w_h;
+        position: fixed;
+        &.onscreen {
+            bottom: $s_btn_bottom;
+            @include s_btn_hover();
+        }
     }
 }
 
@@ -266,6 +282,7 @@ footer {
 
 //Project Pages
 .project-page {
+    background-color: white;
     @import "_baseline-project_template";
 }
 
@@ -382,12 +399,12 @@ footer {
         line-height: 27px;
     }
 
-    .scroll_btn {
-        height: 64px;
-        width: 64px;
-        right: 3vw;
+    #scroll_btn {
+        height: $s_btn_w_h*2;
+        margin-right: $s_btn_right*1.5;
+        width: $s_btn_w_h*2;
         &:before{
-            background-size: 20px 20px;
+            background-size: $s_btn_bg*1.25 $s_btn_bg*1.25;
         }
     }
 
@@ -462,10 +479,13 @@ footer {
             line-height: 30px;
         }
 
-        .scroll_btn {
-            top: 86vh;
-            &:hover {
-                top: calc(86vh - 4px);
+        #scroll_btn {
+            &.active_scroll {
+                bottom: 0 - ($s_btn_w_h*2);
+                &.onscreen {
+                    bottom: $s_btn_bottom * 2;
+                    @include s_btn_hover();
+                }
             }
         }
         
@@ -544,12 +564,6 @@ footer {
 
     .imported-project-page {
         & > div {
-            .scroll_btn {
-                margin-top: calc(210px - 64px - 12px);
-                &:hover {
-                    margin-top: calc(210px - 64px - 16px);
-                }
-            }
         }
 
         .frame-holder {
