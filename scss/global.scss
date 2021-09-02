@@ -49,6 +49,9 @@
             text-decoration: underline;
         }
     }
+    .toast-body {
+        max-width: 300px;
+    }
     .btn-close {
         background-position: calc(100% - 18px) center;
         border-top-left-radius: 0;

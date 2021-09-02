@@ -1,19 +1,6 @@
 const vh = window.innerHeight / 100;
 
 
-// Calls
-window.onload = (event) => {
-    let myAlert = document.querySelector('.toast');
-    let bsAlert = new bootstrap.Toast(myAlert);
-    bsAlert.show();
-    console.log('mmmm-hmmmmm');
-}
-
-document.querySelector("iframe").onload = function() {
-    classFromClass('opacity-0','opacity-0')
-    classToClass('opacity-0','loading');
-};
-
 //Helpers
 function classFromClass(target_class, class_selection) {
     Array.from(document.getElementsByClassName(class_selection))
@@ -22,6 +9,9 @@ function classFromClass(target_class, class_selection) {
 function classToClass(new_class, class_selection) {
     Array.from(document.getElementsByClassName(class_selection))
     .forEach((element) => element.classList.add(new_class));
+}
+function goBack() {
+    window.history.back();
 }
 
 //"Sometimes sticky" Scroll to Top button

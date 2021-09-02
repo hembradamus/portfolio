@@ -85,7 +85,7 @@
                 <div class="title d-lg-flex flex-lg-column justify-content-center">
                   <h1>Picventory</h1>
                   <p>This case study is presented via Google Slides.                  
-                    <a href="https://docs.google.com/presentation/d/e/2PACX-1vQ-_Qo7goM8bsJwWDcKPqle1V-0I7qenStZwJcts8D3Q6W69s_ZtBH2mmXYW6E91A7_pcztBo4GzpK9/pub?start=false&loop=false&delayms=3000" target="_blank">Click here</a> to view in its own tab.</p>
+                    <a href="https://docs.google.com/presentation/d/e/2PACX-1vRkW41av5dSzGYG4aspIXnTsgKd5GYzCmUcfk4yqjYqStdOGCBrzM7moP8UcQLwThphB_AIdBKMdkGI/pub?start=false&loop=false&delayms=3000" target="_blank"><span class="for_mobile">Tap</span><span class="for_not_mobile">Click</span> here to expand presentation in a full browser tab.</a></p>
                 </div>
               </div>
             </div>
@@ -105,12 +105,12 @@
             <div class="mx-auto opacity-0">
               <div class="toast align-items-center border-0 position-absolute top-0 start-50 translate-middle-x h-auto" data-bs-autohide="false" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="d-flex"> 
-                  <div class="toast-body">Presentation controls appear beneath the viewport
+                  <div class="toast-body"><span class="for_mobile">Tap to progress a slide. Swipe left to go back a slide.</span><span class="for_not_mobile">Click to progress a slide. Keyboard arrow left to go back a slide.</span> Controls also appear beneath the presentation.
                   </div>
                   <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
               </div>
-              <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ-_Qo7goM8bsJwWDcKPqle1V-0I7qenStZwJcts8D3Q6W69s_ZtBH2mmXYW6E91A7_pcztBo4GzpK9/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+              <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRkW41av5dSzGYG4aspIXnTsgKd5GYzCmUcfk4yqjYqStdOGCBrzM7moP8UcQLwThphB_AIdBKMdkGI/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
             </div>
           </section>
 
@@ -137,7 +137,7 @@
                       </a>
                     </div>
                     <div class="footer-links">
-                      <a href="../contact.html" class="footer-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact</a>
+                      <a href="../contact.html" class="footer-btn">Contact</a>
                     </div>
                 </div>
               </div>
@@ -162,8 +162,8 @@
     </main>
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="contactForm" aria-hidden="true">
+    <!-- Contact Modal -->
+    <!--div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="contactForm" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -179,11 +179,24 @@
           </div>
         </div>
       </div>
-    </div>
+    </div-->
 
     <!-- Scripts Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <script src="../js/scripts.js"></script>
+    <script>
+      window.onload = (event) => {
+          let myAlert = document.querySelector('.toast');
+          let bsAlert = new bootstrap.Toast(myAlert);
+          bsAlert.show();
+          console.log('mmmm-hmmmmm');
+      }
+
+      document.querySelector("iframe").onload = function() {
+          classFromClass('opacity-0','opacity-0')
+          classToClass('opacity-0','loading');
+      }
+    </script>
   </body>
 </html>

@@ -61,7 +61,7 @@
                 <div class="header">
                   <div>
                     <h1>"When the moon hits your eye like a big pizza pie, that's amore"</h1>
-                    <div class="back"><a href="#" onclick="goBack()">⟵ Back</a></div>
+                    <div class="back"><a href="index.html" onclick="goBack()" id="back_btn">⟵ Back</a></div>
                   </div>
                 </div>
               </div>
@@ -143,11 +143,12 @@
     <!-- Scripts Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+    <script src="js/scripts.js"></script>
     <script>
-      function goBack() {
-        window.history.back();
+      window.onload = (event) => {
+          document.getElementById('back_btn').setAttribute('href','#');
       }
     </script>
-    
+
   </body>
 </html>

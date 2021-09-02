@@ -60,6 +60,10 @@
   text-decoration: underline;
 }
 
+.toast .toast-body {
+  max-width: 300px;
+}
+
 .toast .btn-close {
   background-position: calc(100% - 18px) center;
   border-top-left-radius: 0;
