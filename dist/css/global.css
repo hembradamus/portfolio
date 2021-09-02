@@ -1108,6 +1108,8 @@ footer a {
   -webkit-transition: opacity .2s ease-out;
   transition: opacity .2s ease-out;
   z-index: 2;
+  position: absolute;
+  color: white;
 }
 
 #profile .projects .project .project-name .project-title {
@@ -1118,12 +1120,15 @@ footer a {
   line-height: 25px;
   margin-bottom: 7px;
   text-decoration: none;
+  color: white;
 }
 
 #profile .projects .project .project-name .project-subtitle {
   font-size: 16px;
   line-height: 19px;
   opacity: .8;
+  color: white;
+  margin-bottom: 16px;
 }
 
 #profile .projects .project .image-container {

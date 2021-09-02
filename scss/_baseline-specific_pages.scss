@@ -83,6 +83,8 @@
                 padding: 20px;
                 transition: opacity .2s ease-out;
                 z-index: 2;
+                position: absolute;
+                color: white;
                 .project-title{
                     color: $l-gray;
                     font-family: $h-font;
@@ -91,11 +93,14 @@
                     line-height: 25px;
                     margin-bottom: 7px;
                     text-decoration: none;
+                    color: white;
                 }
                 .project-subtitle{
                     font-size: 16px;
                     line-height: 19px;
                     opacity: .8;
+                    color: white;
+                    margin-bottom:16px;
                 }
             }
             .image-container{
