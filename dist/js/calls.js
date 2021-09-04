@@ -28,7 +28,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 
 
 
-var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65";
+let kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65";
 
 $(document).keydown(function(e) {
   
@@ -39,10 +39,8 @@ $(document).keydown(function(e) {
       $(document).unbind('keydown',arguments.callee);
       
       // do something awesome
-      $("#todoItem").val("Play Contra on NES");
-      additem();
-      $(".contra").html('<iframe width="560" height="315" src="https://www.youtube.com/embed/2mWZlNOzdv8?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
-    
-    }
+      document.getElementById('bonasu').innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/2mWZlNOzdv8?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+        }
   
   });
+  

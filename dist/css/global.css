@@ -103,6 +103,19 @@ html {
   transition-property: color, background-color, border-color, fill;
 }
 
+.slowfade {
+  -webkit-transition: opacity 5s linear;
+  transition: opacity 5s linear;
+}
+
+.slowfade.opacity-off {
+  opacity: 0;
+}
+
+.slowfade.opacity-on {
+  opacity: 1;
+}
+
 /* -------------------- Text  -------------------- */
 body {
   color: #586165;

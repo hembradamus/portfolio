@@ -24,6 +24,18 @@
       gtag('config', 'G-SWDKFNYGJ6');
     </script>
 
+    <meta name="title" property="og:title" content="Randy Hembrador: UX Designer">
+    <meta property="og:type" content="portfolio">
+    <meta name="image" property="og:image" content="https://randyhembrador.com/img/uxf/homeprofile.jpeg">
+    <meta name="description" property="og:description" content="Randy's my name, and UXing's my game!">
+    <meta name="author" content="Randy Hembrador">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@flickr" />
+    <meta name="twitter:title" content="Picventory" />
+    <meta name="twitter:description" content="Randy's my name, and UXing is my game!" />
+    <meta name="twitter:image" content="https://randyhembrador.com/img/uxf/homeprofile.jpeg" />
+
     <!--Page template using bootstrap 5: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -63,7 +75,6 @@
             <div class="row align-items-end">
               <div class="image col-sm-12 col-md-4">
                 <div class="square-img">
-                  <div id="bonasu"></div>
                   <img src="img/uxf/homeprofile.jpeg" alt="Randy!" class="img-fluid">
                 </div>
               </div>
@@ -76,6 +87,13 @@
                 </div>
                 <nav class="profile-links">
                   <ul class="nav nav-pills">
+    
+                    <ul class="nav nav-pills social">
+                      <li class="nav-item linked-in">
+                        <a class="nav-link" aria-current="page" href="https://www.linkedin.com/in/randy-hembrador/" target="blank"><i class="fa fa-linkedin"></i></a>
+                      </li>
+                    </ul> <!-- End of social Links -->
+    
                     <li class="nav-item">
                       <a class="nav-link" aria-current="page" href="about.html">About</a>
                     </li>
@@ -85,15 +103,6 @@
                     <li class="nav-item resume">
                       <a class="nav-link" href="https://docs.google.com/document/d/1z4WcVBQI7RvntRdP2ABXaTckbW8ofwOtKKOMwgrB_YU/" target="blank">Resume</a>
                     </li>
-
-
-    
-                    <ul class="nav nav-pills social">
-                      <li class="nav-item linked-in">
-                        <a class="nav-link" aria-current="page" href="https://www.linkedin.com/in/randy-hembrador/" target="blank"><i class="fa fa-linkedin"></i></a>
-                      </li>
-                    </ul> <!-- End of social Links -->
-    
                     
                   </ul>
                 </nav>
@@ -134,7 +143,11 @@
               
             </div><!-- End row -->
     
-            <!-- Row 2 -->        
+            <!-- Bonus Row -->
+            <div id="bonasu" class="row gx-3 d-none slowfade opacity-off">
+              <div class="project-container">
+              </div>
+            </div>
           </section>
           
         </div>
@@ -172,5 +185,10 @@
 
     <!-- Scripts Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="js/scripts.js">
+    </script>
+    <script>
+      cheatCodeSniffer(konami, '#bonasu', fanprojects);
+    </script>
   </body>
 </html>
